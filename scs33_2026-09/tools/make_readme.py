@@ -18,7 +18,7 @@ FAMILIES = [
     ("qp", "Quadratic programs", "Maros-Meszaros (138) and QPLIB (19): 157 problems, 300 s limit", "records"),
     ("lp", "Linear programs", "Netlib (93), Kennington (16) and the 240 MIPLIB 2017 relaxations: 349 problems, 300 s limit", "records"),
     ("lpbig", "Large linear programs: the Mittelmann set", "37 problems, 1800 s limit, 64 GB containers", "records"),
-    ("sdp", "Semidefinite programs", "SDPLIB (88 feasible) and the Mittelmann SDPs (6): 94 problems, 900 s limit", "site"),
+    ("sdp", "Semidefinite programs", "SDPLIB (88 feasible) and the Mittelmann SDPs (6): 94 problems, 900 s limit; 1e-4 only, since SCS cuDSS was not run at 1e-6 on SDP", "site"),
 ]
 FIG = {"qp": ("figures/records/qp_1e-4_pair.png", "figures/records/qp_1e-6_pair_largest.png"),
        "lp": ("figures/records/lp_1e-4_pair.png", "figures/records/lp_1e-6_pair_largest.png"),
@@ -45,7 +45,7 @@ def cell(df: pd.DataFrame, family: str, subset: str, label: str) -> str:
 def family_table(family: str, kind: str) -> str:
     d4, d6 = load(kind, "1e-4"), load(kind, "1e-6")
     labels = list(d4[(d4.family == family) & (d4.subset == "all")].sort_values("run_time_seconds").label)
-    has6 = not d6.empty and (d6.family == family).any()
+    has6 = family != "sdp" and not d6.empty and (d6.family == family).any()
     head = ["Solver", "1e-4, all", "1e-4, largest quartile"] + (["1e-6, all", "1e-6, largest quartile"] if has6 else [])
     lines = ["| " + " | ".join(head) + " |", "|" + "---|" * len(head)]
     for lab in labels:

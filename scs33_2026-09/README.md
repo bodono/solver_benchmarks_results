@@ -76,17 +76,17 @@ Largest quartile at 1e-6:
 
 ## Semidefinite programs
 
-SDPLIB (88 feasible) and the Mittelmann SDPs (6): 94 problems, 900 s limit.
+SDPLIB (88 feasible) and the Mittelmann SDPs (6): 94 problems, 900 s limit; 1e-4 only, since SCS cuDSS was not run at 1e-6 on SDP.
 
 ![sdp 1e-4](figures/site/sdp_1e-4_pair.png)
 
-| Solver | 1e-4, all | 1e-4, largest quartile | 1e-6, all | 1e-6, largest quartile |
-|---|---|---|---|---|
-| SDPA | 75/94 · 38.2 s | 21/24 · 38.6 s | 69/94 · 58.6 s | 21/24 · 38.6 s |
-| CVXOPT | 76/94 · 52.4 s | 18/24 · 111.5 s | 62/94 · 132.5 s | 16/24 · 178.6 s |
-| Clarabel | 71/94 · 68.9 s | 13/24 · 257.0 s | 69/94 · 75.7 s | 12/24 · 283.1 s |
-| **SCS (CPU, MKL Pardiso)** | 77/94 · 107.5 s | 14/24 · 1090.7 s | 51/94 · 274.0 s | 2/24 · 2455.8 s |
-| **SCS (GPU, cuDSS)** | 73/94 · 146.5 s | 9/24 · 1531.0 s | 0/94 · 2700.0 s | 0/24 · 2700.0 s |
+| Solver | 1e-4, all | 1e-4, largest quartile |
+|---|---|---|
+| SDPA | 75/94 · 38.2 s | 21/24 · 38.6 s |
+| CVXOPT | 76/94 · 52.4 s | 18/24 · 111.5 s |
+| Clarabel | 71/94 · 68.9 s | 13/24 · 257.0 s |
+| **SCS (CPU, MKL Pardiso)** | 77/94 · 107.5 s | 14/24 · 1090.7 s |
+| **SCS (GPU, cuDSS)** | 73/94 · 146.5 s | 9/24 · 1531.0 s |
 
 ## Infeasible and unbounded problems
 
