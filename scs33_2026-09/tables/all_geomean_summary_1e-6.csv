@@ -1,0 +1,41 @@
+family,tol,subset,solver_id,run_time_seconds,mode,shift,max_value,success_count,failure_count,max_value_by_dataset,label
+qp,1e-6,all,qtqp_mkl_1e-6,3.1308297457968894,penalized,10.0,900.0,152,5,,"QTQP (CPU, MKL Pardiso)"
+qp,1e-6,all,piqp_1e-6,3.6755473533537604,penalized,10.0,900.0,150,7,,PIQP
+qp,1e-6,all,clarabel_1e-6,4.448985070237477,penalized,10.0,900.0,148,9,,Clarabel
+qp,1e-6,all,qtqp_cudss_1e-6,4.787653575820627,penalized,10.0,900.0,152,5,,"QTQP (GPU, cuDSS)"
+qp,1e-6,all,scs_cpu_1e-6,11.407156578804283,penalized,10.0,900.0,138,19,,"SCS (CPU, MKL Pardiso)"
+qp,1e-6,all,scs_cudss_1e-6,12.235848380519549,penalized,10.0,900.0,140,17,,"SCS (GPU, cuDSS)"
+qp,1e-6,all,osqp_1e-6,27.21718813458368,penalized,10.0,900.0,121,36,,OSQP
+qp,1e-6,all,cuopt_1e-6,39.57674412339345,penalized,10.0,900.0,103,54,,cuOpt (GPU)
+qp,1e-6,all,highs_1e-6,79.06920158115172,penalized,10.0,900.0,84,73,,HiGHS
+qp,1e-6,all,proxqp_1e-6,88.89909450142284,penalized,10.0,900.0,84,73,,ProxQP
+qp,1e-6,largest,qtqp_cudss_1e-6,10.434157020075283,penalized,10.0,900.0,36,4,,"QTQP (GPU, cuDSS)"
+qp,1e-6,largest,qtqp_mkl_1e-6,10.491510005034751,penalized,10.0,900.0,36,4,,"QTQP (CPU, MKL Pardiso)"
+qp,1e-6,largest,piqp_1e-6,18.290684088841893,penalized,10.0,900.0,34,6,,PIQP
+qp,1e-6,largest,clarabel_1e-6,19.529410692052842,penalized,10.0,900.0,34,6,,Clarabel
+qp,1e-6,largest,scs_cudss_1e-6,26.14596969368756,penalized,10.0,900.0,33,7,,"SCS (GPU, cuDSS)"
+qp,1e-6,largest,scs_cpu_1e-6,28.83880392576799,penalized,10.0,900.0,33,7,,"SCS (CPU, MKL Pardiso)"
+qp,1e-6,largest,cuopt_1e-6,37.082236265575936,penalized,10.0,900.0,27,13,,cuOpt (GPU)
+qp,1e-6,largest,osqp_1e-6,41.79443545789474,penalized,10.0,900.0,30,10,,OSQP
+qp,1e-6,largest,highs_1e-6,323.60111996210185,penalized,10.0,900.0,11,29,,HiGHS
+qp,1e-6,largest,proxqp_1e-6,348.0401827105592,penalized,10.0,900.0,12,28,,ProxQP
+lp,1e-6,all,highs_1e-6,5.016950455716998,penalized,10.0,900.0,336,13,,HiGHS
+lp,1e-6,all,qtqp_cudss_1e-6,6.890563136997059,penalized,10.0,900.0,340,9,,"QTQP (GPU, cuDSS)"
+lp,1e-6,all,qtqp_mkl_1e-6,9.092341915301638,penalized,10.0,900.0,330,19,,"QTQP (CPU, MKL Pardiso)"
+lp,1e-6,all,piqp_1e-6,10.571869043979614,penalized,10.0,900.0,310,39,,PIQP
+lp,1e-6,all,clarabel_1e-6,13.427843492847497,penalized,10.0,900.0,312,37,,Clarabel
+lp,1e-6,all,scs_cudss_1e-6,17.006756137532506,penalized,10.0,900.0,303,46,,"SCS (GPU, cuDSS)"
+lp,1e-6,all,scs_cpu_1e-6,19.920133058660923,penalized,10.0,900.0,295,54,,"SCS (CPU, MKL Pardiso)"
+lp,1e-6,all,pdlp_1e-6,38.58817904643583,penalized,10.0,900.0,263,86,,PDLP (OR-Tools)
+lp,1e-6,all,cuopt_1e-6,56.91220008030379,penalized,10.0,900.0,204,145,,cuOpt (GPU)
+lp,1e-6,all,osqp_1e-6,131.89841779857662,penalized,10.0,900.0,174,175,,OSQP
+lp,1e-6,largest,qtqp_cudss_1e-6,24.500139249705946,penalized,10.0,900.0,83,5,,"QTQP (GPU, cuDSS)"
+lp,1e-6,largest,highs_1e-6,28.229592449307972,penalized,10.0,900.0,76,12,,HiGHS
+lp,1e-6,largest,scs_cudss_1e-6,48.56851057348129,penalized,10.0,900.0,70,18,,"SCS (GPU, cuDSS)"
+lp,1e-6,largest,piqp_1e-6,51.49662315138081,penalized,10.0,900.0,63,25,,PIQP
+lp,1e-6,largest,qtqp_mkl_1e-6,60.69096813192537,penalized,10.0,900.0,73,15,,"QTQP (CPU, MKL Pardiso)"
+lp,1e-6,largest,scs_cpu_1e-6,84.67475538412738,penalized,10.0,900.0,61,27,,"SCS (CPU, MKL Pardiso)"
+lp,1e-6,largest,clarabel_1e-6,88.9198040225111,penalized,10.0,900.0,63,25,,Clarabel
+lp,1e-6,largest,pdlp_1e-6,221.339022638017,penalized,10.0,900.0,40,48,,PDLP (OR-Tools)
+lp,1e-6,largest,cuopt_1e-6,322.6170752296588,penalized,10.0,900.0,20,68,,cuOpt (GPU)
+lp,1e-6,largest,osqp_1e-6,474.2683631252564,penalized,10.0,900.0,21,67,,OSQP

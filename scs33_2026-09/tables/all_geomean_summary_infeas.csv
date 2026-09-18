@@ -1,0 +1,15 @@
+family,tol,subset,solver_id,run_time_seconds,mode,shift,max_value,success_count,failure_count,max_value_by_dataset,label
+infeas,1e-8,all,qtqp_mkl_1e-8,2.057283118018466,penalized,10.0,900.0,28,1,,"QTQP (CPU, MKL Pardiso)"
+infeas,1e-8,all,clarabel_1e-8,4.097650992698927,penalized,10.0,900.0,27,2,,Clarabel
+infeas,1e-8,all,qtqp_cudss_1e-8,4.808663240757491,penalized,10.0,900.0,28,1,,"QTQP (GPU, cuDSS)"
+infeas,1e-8,all,scs_cpu_1e-8,6.568444922432803,penalized,10.0,900.0,26,3,,"SCS (CPU, MKL Pardiso)"
+infeas,1e-8,all,scs_cudss_1e-8,10.117058886971684,penalized,10.0,900.0,25,4,,"SCS (GPU, cuDSS)"
+infeas,1e-8,all,pdlp_1e-8,41.9857555425681,penalized,10.0,900.0,22,7,,PDLP (OR-Tools)
+infeas,1e-8,all,osqp_1e-8,42.44925773588946,penalized,10.0,900.0,19,10,,OSQP
+infeas,1e-8,largest,scs_cpu_1e-8,0.5930028752758609,penalized,10.0,900.0,8,0,,"SCS (CPU, MKL Pardiso)"
+infeas,1e-8,largest,scs_cudss_1e-8,0.7744202024488853,penalized,10.0,900.0,8,0,,"SCS (GPU, cuDSS)"
+infeas,1e-8,largest,qtqp_mkl_1e-8,0.9101430688116707,penalized,10.0,900.0,8,0,,"QTQP (CPU, MKL Pardiso)"
+infeas,1e-8,largest,qtqp_cudss_1e-8,2.8535280791172912,penalized,10.0,900.0,8,0,,"QTQP (GPU, cuDSS)"
+infeas,1e-8,largest,clarabel_1e-8,9.720832789270002,penalized,10.0,900.0,7,1,,Clarabel
+infeas,1e-8,largest,osqp_1e-8,116.18385378997044,penalized,10.0,900.0,4,4,,OSQP
+infeas,1e-8,largest,pdlp_1e-8,138.18429467785987,penalized,10.0,900.0,5,3,,PDLP (OR-Tools)

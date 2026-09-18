@@ -1,0 +1,9 @@
+family,tol,subset,solver_id,run_time_seconds,mode,shift,max_value,success_count,failure_count,max_value_by_dataset,label
+sdp,1e-6,all,sdpa_1e-6,58.62893609533961,penalized,10.0,2700.0,69,25,,SDPA
+sdp,1e-6,all,clarabel_1e-6,75.71828444736417,penalized,10.0,2700.0,69,25,,Clarabel
+sdp,1e-6,all,cvxopt_1e-6,132.47584063228354,penalized,10.0,2700.0,62,32,,CVXOPT
+sdp,1e-6,all,scs_cpu_1e-6,273.96430722723176,penalized,10.0,2700.0,51,43,,"SCS (CPU, MKL Pardiso)"
+sdp,1e-6,largest,sdpa_1e-6,38.59006825317173,penalized,10.0,2700.0,21,3,,SDPA
+sdp,1e-6,largest,cvxopt_1e-6,178.62425738398048,penalized,10.0,2700.0,16,8,,CVXOPT
+sdp,1e-6,largest,clarabel_1e-6,283.1107010771342,penalized,10.0,2700.0,12,12,,Clarabel
+sdp,1e-6,largest,scs_cpu_1e-6,2455.797738173563,penalized,10.0,2700.0,2,22,,"SCS (CPU, MKL Pardiso)"
