@@ -1,5 +1,6 @@
 family,tol,subset,solver_id,run_time_seconds,mode,shift,max_value,success_count,failure_count,max_value_by_dataset,label
 qp,1e-6,all,qtqp_mkl_1e-6,3.1308297457968894,penalized,10.0,900.0,152,5,,"QTQP (CPU, MKL Pardiso)"
+qp,1e-6,all,qpo3_1e-6,3.131002811795545,penalized,10.0,900.0,150,7,,qpo3
 qp,1e-6,all,piqp_1e-6,3.6755473533537604,penalized,10.0,900.0,150,7,,PIQP
 qp,1e-6,all,clarabel_1e-6,4.448985070237477,penalized,10.0,900.0,148,9,,Clarabel
 qp,1e-6,all,qtqp_cudss_1e-6,4.787653575820627,penalized,10.0,900.0,152,5,,"QTQP (GPU, cuDSS)"
@@ -11,6 +12,7 @@ qp,1e-6,all,highs_1e-6,79.06920158115172,penalized,10.0,900.0,84,73,,HiGHS
 qp,1e-6,all,proxqp_1e-6,88.89909450142284,penalized,10.0,900.0,84,73,,ProxQP
 qp,1e-6,largest,qtqp_cudss_1e-6,10.434157020075283,penalized,10.0,900.0,36,4,,"QTQP (GPU, cuDSS)"
 qp,1e-6,largest,qtqp_mkl_1e-6,10.491510005034751,penalized,10.0,900.0,36,4,,"QTQP (CPU, MKL Pardiso)"
+qp,1e-6,largest,qpo3_1e-6,15.623579904805453,penalized,10.0,900.0,34,6,,qpo3
 qp,1e-6,largest,piqp_1e-6,18.290684088841893,penalized,10.0,900.0,34,6,,PIQP
 qp,1e-6,largest,clarabel_1e-6,19.529410692052842,penalized,10.0,900.0,34,6,,Clarabel
 qp,1e-6,largest,scs_cudss_1e-6,26.14596969368756,penalized,10.0,900.0,33,7,,"SCS (GPU, cuDSS)"
@@ -21,6 +23,7 @@ qp,1e-6,largest,highs_1e-6,323.60111996210185,penalized,10.0,900.0,11,29,,HiGHS
 qp,1e-6,largest,proxqp_1e-6,348.0401827105592,penalized,10.0,900.0,12,28,,ProxQP
 lp,1e-6,all,highs_1e-6,5.016950455716998,penalized,10.0,900.0,336,13,,HiGHS
 lp,1e-6,all,qtqp_cudss_1e-6,6.890563136997059,penalized,10.0,900.0,340,9,,"QTQP (GPU, cuDSS)"
+lp,1e-6,all,qpo3_1e-6,7.323271082431617,penalized,10.0,900.0,326,23,,qpo3
 lp,1e-6,all,qtqp_mkl_1e-6,9.092341915301638,penalized,10.0,900.0,330,19,,"QTQP (CPU, MKL Pardiso)"
 lp,1e-6,all,piqp_1e-6,10.571869043979614,penalized,10.0,900.0,310,39,,PIQP
 lp,1e-6,all,clarabel_1e-6,13.427843492847497,penalized,10.0,900.0,312,37,,Clarabel
@@ -31,6 +34,7 @@ lp,1e-6,all,cuopt_1e-6,56.91220008030379,penalized,10.0,900.0,204,145,,cuOpt (GP
 lp,1e-6,all,osqp_1e-6,131.89841779857662,penalized,10.0,900.0,174,175,,OSQP
 lp,1e-6,largest,qtqp_cudss_1e-6,24.500139249705946,penalized,10.0,900.0,83,5,,"QTQP (GPU, cuDSS)"
 lp,1e-6,largest,highs_1e-6,28.229592449307972,penalized,10.0,900.0,76,12,,HiGHS
+lp,1e-6,largest,qpo3_1e-6,40.685365595159645,penalized,10.0,900.0,70,18,,qpo3
 lp,1e-6,largest,scs_cudss_1e-6,48.56851057348129,penalized,10.0,900.0,70,18,,"SCS (GPU, cuDSS)"
 lp,1e-6,largest,piqp_1e-6,51.49662315138081,penalized,10.0,900.0,63,25,,PIQP
 lp,1e-6,largest,qtqp_mkl_1e-6,60.69096813192537,penalized,10.0,900.0,73,15,,"QTQP (CPU, MKL Pardiso)"

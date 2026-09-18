@@ -115,6 +115,18 @@
         "rows": 13
       },
       {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_qpo3_1e-4",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_qpo3_1e-6",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_qpo3_1e-8",
+        "rows": 13
+      },
+      {
         "run_dir": "results/scs33big_shards/lpbig_mittelmann0_qtqp_cudss_1e-4",
         "rows": 13
       },
@@ -180,6 +192,18 @@
       },
       {
         "run_dir": "results/scs33big_shards/lpbig_mittelmann1_piqp_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_qpo3_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_qpo3_1e-6",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_qpo3_1e-8",
         "rows": 12
       },
       {
@@ -249,6 +273,18 @@
       {
         "run_dir": "results/scs33big_shards/lpbig_mittelmann2_piqp_1e-4",
         "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_qpo3_1e-4",
+        "rows": 10
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_qpo3_1e-6",
+        "rows": 10
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_qpo3_1e-8",
+        "rows": 10
       },
       {
         "run_dir": "results/scs33big_shards/lpbig_mittelmann2_qtqp_cudss_1e-4",

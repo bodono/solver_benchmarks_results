@@ -129,6 +129,18 @@
         "rows": 16
       },
       {
+        "run_dir": "results/scs33_shards/lp_kennington_qpo3_1e-4",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_qpo3_1e-6",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_qpo3_1e-8",
+        "rows": 16
+      },
+      {
         "run_dir": "results/scs33_shards/lp_kennington_qtqp_cudss_1e-4",
         "rows": 16
       },
@@ -357,6 +369,18 @@
         "rows": 4
       },
       {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_qpo3_1e-4",
+        "rows": 239
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_qpo3_1e-6",
+        "rows": 239
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_qpo3_1e-8",
+        "rows": 239
+      },
+      {
         "run_dir": "results/scs33_shards/lp_miplib_relax_qtqp_cudss_1e-4",
         "rows": 240
       },
@@ -574,6 +598,18 @@
       },
       {
         "run_dir": "results/scs33_shards/lp_netlib_piqp_1e-6",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_qpo3_1e-4",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_qpo3_1e-6",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_qpo3_1e-8",
         "rows": 93
       },
       {

@@ -129,6 +129,18 @@
         "rows": 138
       },
       {
+        "run_dir": "results/scs33_shards/qp_maros_meszaros_qpo3_1e-4",
+        "rows": 138
+      },
+      {
+        "run_dir": "results/scs33_shards/qp_maros_meszaros_qpo3_1e-6",
+        "rows": 138
+      },
+      {
+        "run_dir": "results/scs33_shards/qp_maros_meszaros_qpo3_1e-8",
+        "rows": 138
+      },
+      {
         "run_dir": "results/scs33_shards/qp_maros_meszaros_qtqp_cudss_1e-4",
         "rows": 138
       },
@@ -298,6 +310,18 @@
       },
       {
         "run_dir": "results/scs33_shards/qp_qplib_proxqp_1e-6",
+        "rows": 19
+      },
+      {
+        "run_dir": "results/scs33_shards/qp_qplib_qpo3_1e-4",
+        "rows": 19
+      },
+      {
+        "run_dir": "results/scs33_shards/qp_qplib_qpo3_1e-6",
+        "rows": 19
+      },
+      {
+        "run_dir": "results/scs33_shards/qp_qplib_qpo3_1e-8",
         "rows": 19
       },
       {

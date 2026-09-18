@@ -113,6 +113,14 @@
         "rows": 29
       },
       {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_qpo3_1e-6",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_qpo3_1e-8_inf4",
+        "rows": 29
+      },
+      {
         "run_dir": "results/scs33_shards/infeas_netlib_infeasible_qtqp_cudss_1e-8",
         "rows": 29
       },

@@ -6,17 +6,17 @@ SP=/Users/bodonoghue/scs33_tools
 cd ~/git/solver_benchmarks
 export PYTHONPATH=$HOME/git/sb-derive   # hardened kkt-verify (PR #88)
 FIG=$HOME/git/sb-tooling/tools/make_figures.py  # penalty, profiles, pairs (PR #90)
-IPM='--use-run clarabel=1e-6 --use-run sdp:clarabel=1e-8 --use-run piqp=1e-6 --use-run highs=1e-6 --use-run sdpa=1e-6 --use-run cvxopt=1e-6'
+IPM='--use-run clarabel=1e-6 --use-run sdp:clarabel=1e-8 --use-run piqp=1e-6 --use-run highs=1e-6 --use-run sdpa=1e-6 --use-run cvxopt=1e-6 --use-run qpo3=1e-8'
 FO4='--use-run pdlp=1e-5 --use-run proxqp=1e-5'
 FO5='--use-run pdlp=1e-6 --use-run proxqp=1e-6'
-NOQ='--exclude-solver qtqp_mkl --exclude-solver qtqp_cudss'  # QTQP is for the record only, not the SCS site
+NOQ='--exclude-solver qtqp_mkl --exclude-solver qtqp_cudss --exclude-solver qpo3'  # QTQP is for the record only, not the SCS site
 # 1. fetch: campaign name -> spec files
 .venv-bench/bin/python - <<'PY'
 import json, subprocess, os
 specs = {"scs33": ["campaign/scs33/campaign.json"], "scs33big": ["campaign/scs33big/campaign.json", "campaign/scs33big_cl6/campaign.json", "campaign/scs33big_cl6b/campaign.json"],
          "scs33t5": ["campaign/scs33t5/campaign.json", "campaign/scs33t5all/campaign.json"], "scs33cl8": ["campaign/scs33cl8/campaign.json"], "scs33cltry": ["campaign/scs33cltry/campaign.json"], "scs33cltry2": ["campaign/scs33cltry2/campaign.json"],
          "scs33fix": ["campaign/scs33sdpfix/campaign.json", "campaign/scs33big6/campaign.json", "campaign/scs33miss4/campaign.json"],
-         "scs33qtqp": ["campaign/scs33qtqp/campaign.json", "campaign/scs33qtqp8/campaign.json"], "scs33infeas": ["campaign/scs33infeas/campaign.json", "campaign/scs33infeas2/campaign.json", "campaign/scs33infeas5/campaign.json", "campaign/scs33infeas6/campaign.json"]}
+         "scs33qtqp": ["campaign/scs33qtqp/campaign.json", "campaign/scs33qtqp8/campaign.json"], "scs33infeas": ["campaign/scs33infeas/campaign.json", "campaign/scs33infeas2/campaign.json", "campaign/scs33infeas5/campaign.json", "campaign/scs33infeas6/campaign.json"], "scs33qpo3": ["campaign/scs33qpo3/campaign.json", "campaign/scs33qpo3inf/campaign.json"]}
 n = 0
 for camp, files in specs.items():
     for f in files:

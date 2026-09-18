@@ -30,17 +30,17 @@ FAMILIES = [
 RULE = {
     "1e-4": {"scs_cpu": "1e-4", "scs_cudss": "1e-4", "osqp": "1e-4", "cuopt": "1e-4", "pdlp": "1e-5", "proxqp": "1e-5",
              "clarabel": "1e-6", "piqp": "1e-6", "highs": "1e-6", "sdpa": "1e-6", "cvxopt": "1e-6",
-             "qtqp_mkl": "1e-8", "qtqp_cudss": "1e-8"},
+             "qtqp_mkl": "1e-8", "qtqp_cudss": "1e-8", "qpo3": "1e-8"},
     "1e-6": {"scs_cpu": "1e-6", "scs_cudss": "1e-6", "osqp": "1e-6", "cuopt": "1e-6", "pdlp": "1e-6", "proxqp": "1e-6",
              "clarabel": "1e-6", "piqp": "1e-6", "highs": "1e-6", "sdpa": "1e-6", "cvxopt": "1e-6",
-             "qtqp_mkl": "1e-8", "qtqp_cudss": "1e-8"},
+             "qtqp_mkl": "1e-8", "qtqp_cudss": "1e-8", "qpo3": "1e-8"},
 }
 RULE["1e-4"]["clarabel@sdp"] = "1e-8"
 RULE["1e-6"]["clarabel@sdp"] = "1e-8"
 LABELS = {"scs_cpu": "SCS (CPU, MKL Pardiso)", "scs_cudss": "SCS (GPU, cuDSS)", "cuopt": "cuOpt (GPU)", "osqp": "OSQP",
           "clarabel": "Clarabel", "piqp": "PIQP", "proxqp": "ProxQP", "highs": "HiGHS", "pdlp": "PDLP (OR-Tools)",
           "pdlp_cert4": "PDLP (OR-Tools), certificate tolerance 1e-4", "cvxopt": "CVXOPT", "sdpa": "SDPA",
-          "qtqp_mkl": "QTQP (CPU, MKL Pardiso)", "qtqp_cudss": "QTQP (GPU, cuDSS)"}
+          "qtqp_mkl": "QTQP (CPU, MKL Pardiso)", "qtqp_cudss": "QTQP (GPU, cuDSS)", "qpo3": "qpo3"}
 DATASET_NAMES = {"maros_meszaros": "Maros-Meszaros", "qplib": "QPLIB", "netlib": "Netlib", "kennington": "Kennington",
                  "miplib_relax": "MIPLIB 2017 relaxations", "mittelmann0": "Mittelmann", "mittelmann1": "Mittelmann",
                  "mittelmann2": "Mittelmann", "sdplib": "SDPLIB", "mittelmann_sdp": "Mittelmann SDPs"}
@@ -133,10 +133,10 @@ def per_dataset_table(family: str, csv_name: str, tol: str) -> str:
 
 # ---------- infeasibility detection ----------
 TOL = 1e-3
-ORDER = ["scs_cpu", "scs_cudss", "clarabel", "qtqp_mkl", "qtqp_cudss", "piqp", "highs", "osqp", "pdlp", "pdlp_cert4", "cuopt", "cvxopt", "sdpa"]
+ORDER = ["scs_cpu", "scs_cudss", "clarabel", "qtqp_mkl", "qtqp_cudss", "qpo3", "piqp", "highs", "osqp", "pdlp", "pdlp_cert4", "cuopt", "cvxopt", "sdpa"]
 SHOW = {"scs_cpu_1e-4", "scs_cpu_1e-8", "scs_cudss_1e-8", "clarabel_1e-8", "osqp_1e-8", "pdlp_1e-5", "cuopt_1e-4",
-        "highs_1e-6", "piqp_1e-6", "qtqp_mkl_1e-8", "qtqp_cudss_1e-8"}
-NOTE = {"scs_cpu_1e-8", "scs_cudss_1e-8", "clarabel_1e-8"}
+        "highs_1e-6", "piqp_1e-6", "qtqp_mkl_1e-8", "qtqp_cudss_1e-8", "qpo3_1e-8"}
+NOTE = {"scs_cpu_1e-8", "scs_cudss_1e-8", "clarabel_1e-8", "qpo3_1e-8"}
 
 
 def expected(r):
