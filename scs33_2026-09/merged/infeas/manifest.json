@@ -1,0 +1,170 @@
+{
+  "run_id": "infeas_netlib_infeasible_clarabel_1e-6_inf",
+  "created_at_utc": "2026-09-17T16:12:28.136167+00:00",
+  "config": {
+    "name": "infeas_netlib_infeasible_clarabel_1e-6_inf",
+    "datasets": [
+      {
+        "id": "netlib_infeasible",
+        "name": "netlib",
+        "dataset_options": {
+          "subset": "infeasible"
+        },
+        "include": [],
+        "exclude": []
+      }
+    ],
+    "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+    "include": [],
+    "exclude": [],
+    "parallelism": 1,
+    "resume": true,
+    "timeout_seconds": 360.0,
+    "fail_on_unsupported": false,
+    "auto_prepare_data": false,
+    "config_hash": "71515430736d",
+    "solvers": [
+      {
+        "id": "clarabel_1e-6",
+        "solver": "clarabel",
+        "settings": {
+          "time_limit": 300.0,
+          "tol_feas": 1e-06,
+          "tol_gap_abs": 1e-06,
+          "tol_gap_rel": 1e-06,
+          "tol_infeas_abs": 1e-06,
+          "tol_infeas_rel": 1e-06
+        },
+        "timeout_seconds": null
+      }
+    ]
+  },
+  "system": {
+    "python_executable": "python",
+    "python_version": "3.12.10",
+    "python_implementation": "CPython",
+    "python_compiler": "GCC 12.2.0",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "system": "Linux",
+    "release": "4.19.0-gvisor",
+    "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+    "machine": "x86_64",
+    "processor": "",
+    "cpu": {
+      "logical_count": 20,
+      "physical_count": 20,
+      "max_frequency_mhz": null,
+      "current_frequency_mhz": 3065.0409999999993,
+      "model": "unknown"
+    },
+    "memory": {
+      "total_bytes": 481253064704,
+      "available_bytes": 480904601600,
+      "swap_total_bytes": 0
+    },
+    "library_versions": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "pandas": "3.0.5",
+      "pyarrow": "25.0.1"
+    }
+  },
+  "derived": {
+    "kind": "merge",
+    "sources": [
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_clarabel_1e-6_inf",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_clarabel_1e-8_inf4",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_cuopt_1e-4",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_highs_1e-6",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_osqp_1e-4",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_osqp_1e-6",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_osqp_1e-8_inf4",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_pdlp_1e-5",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_pdlp_cert4_1e-5",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_piqp_1e-6",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_qtqp_cudss_1e-8",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_qtqp_mkl_1e-8",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_scs_cpu_1e-4_inf",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_scs_cpu_1e-6_inf",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_scs_cpu_1e-8_inf4",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_scs_cudss_1e-4_inf",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_scs_cudss_1e-6_inf",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_netlib_infeasible_scs_cudss_1e-8_inf4",
+        "rows": 29
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_sdplib_infeasible_clarabel_1e-8",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_sdplib_infeasible_cvxopt_1e-6",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_sdplib_infeasible_scs_cpu_1e-4_inf",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_sdplib_infeasible_scs_cudss_1e-4_inf",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/infeas_sdplib_infeasible_sdpa_1e-6",
+        "rows": 4
+      }
+    ],
+    "duplicate_keys": 0
+  }
+}

@@ -1,0 +1,19 @@
+run:
+  name: qp_maros_meszaros_qtqp_mkl_1e-6
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+  datasets:
+  - name: maros_meszaros
+    id: maros_meszaros
+solvers:
+- id: qtqp_mkl_1e-6
+  solver: qtqp
+  settings:
+    tol_feas: 1.0e-06
+    tol_gap_abs: 1.0e-06
+    tol_gap_rel: 1.0e-06
+    max_iter: 200
+    verbose: false
+    linear_solver: pardiso

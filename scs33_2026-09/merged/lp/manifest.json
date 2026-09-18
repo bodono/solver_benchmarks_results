@@ -1,0 +1,630 @@
+{
+  "run_id": "lp_kennington_clarabel_1e-4",
+  "created_at_utc": "2026-09-12T16:28:04.542348+00:00",
+  "config": {
+    "name": "lp_kennington_clarabel_1e-4",
+    "datasets": [
+      {
+        "id": "kennington",
+        "name": "kennington",
+        "dataset_options": {},
+        "include": [],
+        "exclude": []
+      }
+    ],
+    "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+    "include": [],
+    "exclude": [],
+    "parallelism": 1,
+    "resume": true,
+    "timeout_seconds": 360.0,
+    "fail_on_unsupported": false,
+    "auto_prepare_data": false,
+    "config_hash": "828c1f009ed7",
+    "solvers": [
+      {
+        "id": "clarabel_1e-4",
+        "solver": "clarabel",
+        "settings": {
+          "time_limit": 300.0,
+          "tol_feas": 0.0001,
+          "tol_gap_abs": 0.0001,
+          "tol_gap_rel": 0.0001
+        },
+        "timeout_seconds": null
+      }
+    ]
+  },
+  "system": {
+    "python_executable": "python",
+    "python_version": "3.12.10",
+    "python_implementation": "CPython",
+    "python_compiler": "GCC 12.2.0",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "system": "Linux",
+    "release": "4.19.0-gvisor",
+    "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+    "machine": "x86_64",
+    "processor": "",
+    "cpu": {
+      "logical_count": 20,
+      "physical_count": 20,
+      "max_frequency_mhz": null,
+      "current_frequency_mhz": 2449.9959999999996,
+      "model": "unknown"
+    },
+    "memory": {
+      "total_bytes": 946253975552,
+      "available_bytes": 945907601408,
+      "swap_total_bytes": 0
+    },
+    "library_versions": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "pandas": "3.0.5",
+      "pyarrow": "25.0.1"
+    }
+  },
+  "derived": {
+    "kind": "merge",
+    "sources": [
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_clarabel_1e-4",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_clarabel_1e-6",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_cuopt_1e-4",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_cuopt_1e-5",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_cuopt_1e-6",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_highs_1e-4",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_highs_1e-6",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_osqp_1e-4",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_osqp_1e-5",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_osqp_1e-6",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_pdlp_1e-4",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_pdlp_1e-5",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_pdlp_1e-6",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_piqp_1e-4",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_piqp_1e-6",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_qtqp_cudss_1e-4",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_qtqp_cudss_1e-6",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_qtqp_cudss_1e-8",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_qtqp_mkl_1e-4",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_qtqp_mkl_1e-6",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_qtqp_mkl_1e-8",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_scs_cpu_1e-4",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_scs_cpu_1e-5",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_scs_cpu_1e-6",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_scs_cudss_1e-4",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_scs_cudss_1e-5",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_kennington_scs_cudss_1e-6",
+        "rows": 16
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_clarabel_1e-4",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_clarabel_1e-4_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_clarabel_1e-4_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_clarabel_1e-6",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_clarabel_1e-6_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_clarabel_1e-6_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_cuopt_1e-4",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_cuopt_1e-4_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_cuopt_1e-4_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_cuopt_1e-5",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_cuopt_1e-5_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_cuopt_1e-5_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_cuopt_1e-6",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_cuopt_1e-6_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_cuopt_1e-6_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_highs_1e-4",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_highs_1e-4_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_highs_1e-4_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_highs_1e-6",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_highs_1e-6_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_highs_1e-6_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_osqp_1e-4",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_osqp_1e-4_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_osqp_1e-4_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_osqp_1e-5",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_osqp_1e-5_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_osqp_1e-5_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_osqp_1e-6",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_osqp_1e-6_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_osqp_1e-6_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_pdlp_1e-4",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_pdlp_1e-4_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_pdlp_1e-4_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_pdlp_1e-5",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_pdlp_1e-5_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_pdlp_1e-5_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_pdlp_1e-6",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_pdlp_1e-6_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_pdlp_1e-6_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_piqp_1e-4",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_piqp_1e-4_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_piqp_1e-4_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_piqp_1e-6",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_piqp_1e-6_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_piqp_1e-6_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_qtqp_cudss_1e-4",
+        "rows": 240
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_qtqp_cudss_1e-6",
+        "rows": 240
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_qtqp_cudss_1e-8",
+        "rows": 240
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_qtqp_mkl_1e-4",
+        "rows": 240
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_qtqp_mkl_1e-6",
+        "rows": 240
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_qtqp_mkl_1e-8",
+        "rows": 240
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cpu_1e-4",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cpu_1e-4_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cpu_1e-4_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cpu_1e-5",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cpu_1e-5_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cpu_1e-5_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cpu_1e-6",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cpu_1e-6_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cpu_1e-6_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cudss_1e-4",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cudss_1e-4_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cudss_1e-4_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cudss_1e-5",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cudss_1e-5_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cudss_1e-5_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cudss_1e-6",
+        "rows": 235
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cudss_1e-6_big6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_miplib_relax_scs_cudss_1e-6_miss4",
+        "rows": 4
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_clarabel_1e-4",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_clarabel_1e-6",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_cuopt_1e-4",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_cuopt_1e-6",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_highs_1e-4",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_highs_1e-6",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_osqp_1e-4",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_osqp_1e-6",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_pdlp_1e-4",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_pdlp_1e-6",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_piqp_1e-4",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_piqp_1e-6",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_scs_cpu_1e-4",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_scs_cpu_1e-6",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_scs_cudss_1e-4",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_mittelmann_scs_cudss_1e-6",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_clarabel_1e-4",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_clarabel_1e-6",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_cuopt_1e-4",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_cuopt_1e-5",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_cuopt_1e-6",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_highs_1e-4",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_highs_1e-6",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_osqp_1e-4",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_osqp_1e-5",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_osqp_1e-6",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_pdlp_1e-4",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_pdlp_1e-5",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_pdlp_1e-6",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_piqp_1e-4",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_piqp_1e-6",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_qtqp_cudss_1e-4",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_qtqp_cudss_1e-6",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_qtqp_cudss_1e-8",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_qtqp_mkl_1e-4",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_qtqp_mkl_1e-6",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_qtqp_mkl_1e-8",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_scs_cpu_1e-4",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_scs_cpu_1e-5",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_scs_cpu_1e-6",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_scs_cudss_1e-4",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_scs_cudss_1e-5",
+        "rows": 93
+      },
+      {
+        "run_dir": "results/scs33_shards/lp_netlib_scs_cudss_1e-6",
+        "rows": 93
+      }
+    ],
+    "duplicate_keys": 0
+  }
+}

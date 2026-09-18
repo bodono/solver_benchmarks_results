@@ -1,0 +1,302 @@
+{
+  "run_id": "sdp_mittelmann_sdp_clarabel_1e-4",
+  "created_at_utc": "2026-09-16T20:09:17.268019+00:00",
+  "config": {
+    "name": "sdp_mittelmann_sdp_clarabel_1e-4",
+    "datasets": [
+      {
+        "id": "mittelmann_sdp",
+        "name": "mittelmann_sdp",
+        "dataset_options": {
+          "subset": "all"
+        },
+        "include": [],
+        "exclude": [
+          "G40mc"
+        ]
+      }
+    ],
+    "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+    "include": [],
+    "exclude": [],
+    "parallelism": 1,
+    "resume": true,
+    "timeout_seconds": 960.0,
+    "fail_on_unsupported": false,
+    "auto_prepare_data": false,
+    "config_hash": "099b6caa5412",
+    "solvers": [
+      {
+        "id": "clarabel_1e-4",
+        "solver": "clarabel",
+        "settings": {
+          "time_limit": 900.0,
+          "tol_feas": 0.0001,
+          "tol_gap_abs": 0.0001,
+          "tol_gap_rel": 0.0001
+        },
+        "timeout_seconds": null
+      }
+    ]
+  },
+  "system": {
+    "python_executable": "python",
+    "python_version": "3.12.10",
+    "python_implementation": "CPython",
+    "python_compiler": "GCC 12.2.0",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "system": "Linux",
+    "release": "4.19.0-gvisor",
+    "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+    "machine": "x86_64",
+    "processor": "",
+    "cpu": {
+      "logical_count": 20,
+      "physical_count": 20,
+      "max_frequency_mhz": null,
+      "current_frequency_mhz": 3049.9959999999996,
+      "model": "unknown"
+    },
+    "memory": {
+      "total_bytes": 236039155712,
+      "available_bytes": 235690655744,
+      "swap_total_bytes": 0
+    },
+    "library_versions": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "pandas": "3.0.5",
+      "pyarrow": "25.0.1"
+    }
+  },
+  "derived": {
+    "kind": "merge",
+    "sources": [
+      {
+        "run_dir": "results/scs33_shards/sdp_mittelmann_sdp_clarabel_1e-4",
+        "rows": 5
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_mittelmann_sdp_clarabel_1e-6",
+        "rows": 5
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_mittelmann_sdp_clarabel_1e-8",
+        "rows": 5
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_mittelmann_sdp_clarabel_1e-8_try_G40mc",
+        "rows": 0
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_mittelmann_sdp_cvxopt_1e-4",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_mittelmann_sdp_cvxopt_1e-6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_mittelmann_sdp_scs_cpu_1e-4",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_mittelmann_sdp_scs_cpu_1e-6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_mittelmann_sdp_scs_cudss_1e-4",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_mittelmann_sdp_scs_cudss_1e-6",
+        "rows": 0
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_mittelmann_sdp_sdpa_1e-4",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_mittelmann_sdp_sdpa_1e-6",
+        "rows": 6
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-4",
+        "rows": 73
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-6",
+        "rows": 73
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8",
+        "rows": 73
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_equalG11",
+        "rows": 0
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_equalG51",
+        "rows": 0
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_gpp500-1",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_gpp500-2",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_gpp500-3",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_gpp500-4",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_maxG11",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_maxG32",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_maxG51",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_maxG55",
+        "rows": 0
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_maxG60",
+        "rows": 0
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_mcp500-1",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_mcp500-2",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_mcp500-3",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_mcp500-4",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_qpG11",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_qpG51",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_thetaG11",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_clarabel_1e-8_try_thetaG51",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_cvxopt_1e-4",
+        "rows": 89
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_cvxopt_1e-4_fix",
+        "rows": 2
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_cvxopt_1e-4_thetaG51",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_cvxopt_1e-6",
+        "rows": 89
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_cvxopt_1e-6_fix",
+        "rows": 2
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_cvxopt_1e-6_thetaG51",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_scs_cpu_1e-4",
+        "rows": 89
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_scs_cpu_1e-4_fix",
+        "rows": 2
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_scs_cpu_1e-4_thetaG51",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_scs_cpu_1e-6",
+        "rows": 89
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_scs_cpu_1e-6_fix",
+        "rows": 2
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_scs_cpu_1e-6_thetaG51",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_scs_cudss_1e-4",
+        "rows": 89
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_scs_cudss_1e-4_fix",
+        "rows": 2
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_scs_cudss_1e-4_thetaG51",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_scs_cudss_1e-6",
+        "rows": 28
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_sdpa_1e-4",
+        "rows": 89
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_sdpa_1e-4_fix",
+        "rows": 2
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_sdpa_1e-4_thetaG51",
+        "rows": 1
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_sdpa_1e-6",
+        "rows": 89
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_sdpa_1e-6_fix",
+        "rows": 2
+      },
+      {
+        "run_dir": "results/scs33_shards/sdp_sdplib_sdpa_1e-6_thetaG51",
+        "rows": 1
+      }
+    ],
+    "duplicate_keys": 0
+  }
+}

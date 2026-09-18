@@ -1,0 +1,292 @@
+{
+  "run_id": "lpbig_mittelmann0_clarabel_1e-4",
+  "created_at_utc": "2026-09-13T14:27:15.086717+00:00",
+  "config": {
+    "name": "lpbig_mittelmann0_clarabel_1e-4",
+    "datasets": [
+      {
+        "id": "mittelmann0",
+        "name": "mittelmann",
+        "dataset_options": {},
+        "include": [
+          "Dual2_5000",
+          "a2864",
+          "bdry2",
+          "chromaticindex1024-7",
+          "ex10",
+          "fhnw-binschedule1",
+          "graph40-40",
+          "neos-3025225",
+          "neos-5251015",
+          "qap15",
+          "scpm1",
+          "supportcase19",
+          "thk_48"
+        ],
+        "exclude": []
+      }
+    ],
+    "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+    "include": [],
+    "exclude": [],
+    "parallelism": 1,
+    "resume": true,
+    "timeout_seconds": 1860.0,
+    "fail_on_unsupported": false,
+    "auto_prepare_data": false,
+    "config_hash": "b98deb46bf7b",
+    "solvers": [
+      {
+        "id": "clarabel_1e-4",
+        "solver": "clarabel",
+        "settings": {
+          "time_limit": 1800.0,
+          "tol_feas": 0.0001,
+          "tol_gap_abs": 0.0001,
+          "tol_gap_rel": 0.0001
+        },
+        "timeout_seconds": null
+      }
+    ]
+  },
+  "system": {
+    "python_executable": "python",
+    "python_version": "3.12.10",
+    "python_implementation": "CPython",
+    "python_compiler": "GCC 12.2.0",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "system": "Linux",
+    "release": "4.19.0-gvisor",
+    "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+    "machine": "x86_64",
+    "processor": "",
+    "cpu": {
+      "logical_count": 20,
+      "physical_count": 20,
+      "max_frequency_mhz": null,
+      "current_frequency_mhz": 3090.8090000000007,
+      "model": "unknown"
+    },
+    "memory": {
+      "total_bytes": 481253068800,
+      "available_bytes": 480904597504,
+      "swap_total_bytes": 0
+    },
+    "library_versions": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "pandas": "3.0.5",
+      "pyarrow": "25.0.1"
+    }
+  },
+  "derived": {
+    "kind": "merge",
+    "sources": [
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_clarabel_1e-4",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_clarabel_1e-6",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_cuopt_1e-4",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_cuopt_1e-5",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_highs_1e-4",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_pdlp_1e-4",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_pdlp_1e-5",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_piqp_1e-4",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_qtqp_cudss_1e-4",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_qtqp_cudss_1e-6",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_qtqp_mkl_1e-4",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_qtqp_mkl_1e-6",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_scs_cpu_1e-4",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_scs_cpu_1e-5",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_scs_cudss_1e-4",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann0_scs_cudss_1e-5",
+        "rows": 13
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_clarabel_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_clarabel_1e-6",
+        "rows": 7
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_clarabel_1e-6_b",
+        "rows": 2
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_cuopt_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_cuopt_1e-5",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_highs_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_pdlp_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_pdlp_1e-5",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_piqp_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_qtqp_cudss_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_qtqp_cudss_1e-6",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_qtqp_mkl_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_qtqp_mkl_1e-6",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_scs_cpu_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_scs_cpu_1e-5",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_scs_cudss_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann1_scs_cudss_1e-5",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_clarabel_1e-4",
+        "rows": 10
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_clarabel_1e-6",
+        "rows": 7
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_clarabel_1e-6_b",
+        "rows": 2
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_cuopt_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_cuopt_1e-5",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_highs_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_pdlp_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_pdlp_1e-5",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_piqp_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_qtqp_cudss_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_qtqp_cudss_1e-6",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_qtqp_mkl_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_qtqp_mkl_1e-6",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_scs_cpu_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_scs_cpu_1e-5",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_scs_cudss_1e-4",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann2_scs_cudss_1e-5",
+        "rows": 12
+      },
+      {
+        "run_dir": "results/scs33big_shards/lpbig_mittelmann_clarabel_1e-6_carried",
+        "rows": 5
+      }
+    ],
+    "duplicate_keys": 0
+  }
+}
