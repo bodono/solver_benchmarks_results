@@ -17,5 +17,8 @@ data, independent of what the solver reported.
 |---|---|---|
 | [`scs33_2026-09`](scs33_2026-09/) | SCS 3.3.1 vs Clarabel, PIQP, OSQP, ProxQP, HiGHS, PDLP, cuOpt, CVXOPT, SDPA (and QTQP, for the record) on QP, LP, Mittelmann LP, SDP and infeasible problems | [SCS benchmarks page](https://www.cvxgrp.org/scs/benchmarks/) |
 
-The complete archive of each campaign (raw per-shard results, verified runs at every threshold,
+![SCS 3.3 campaign headline](scs33_2026-09/figures/records/grid_with_qtqp.png)
+
+Each campaign directory has a README with the plots and headline tables for every solver and test set
+(for example [`scs33_2026-09/README.md`](scs33_2026-09/README.md)). The complete archive of each campaign (raw per-shard results, verified runs at every threshold,
 Modal logs) is attached to the campaign's GitHub release.
