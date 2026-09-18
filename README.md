@@ -17,7 +17,17 @@ data, independent of what the solver reported.
 |---|---|---|
 | [`scs33_2026-09`](scs33_2026-09/) | Clarabel, CVXOPT, cuOpt, HiGHS, OSQP, PDLP, PIQP, ProxQP, QTQP, SCS 3.3.1 and SDPA on QP, LP, Mittelmann LP, SDP and infeasible problems | run for the [SCS 3.3 benchmarks page](https://www.cvxgrp.org/scs/benchmarks/), which shows a subset |
 
+Largest quarter of the QP and LP sets and the Mittelmann LP set, at 1e-4:
+
 ![September 2026 campaign headline](scs33_2026-09/figures/all/grid_1e-4.png)
+
+SDPLIB and the Mittelmann SDPs at 1e-4:
+
+![SDP](scs33_2026-09/figures/all/sdp_1e-4_pair.png)
+
+Infeasibility detection on the Netlib infeasible LPs (a solve is a verified certificate):
+
+![infeasibility](scs33_2026-09/figures/all/infeas_1e-8_pair.png)
 
 Each campaign directory has a README with the plots and headline tables for every solver and test set
 (for example [`scs33_2026-09/README.md`](scs33_2026-09/README.md)). The complete archive of each campaign (raw per-shard results, verified runs at every threshold,
