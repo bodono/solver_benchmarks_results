@@ -1,7 +1,7 @@
 """RST tables for the infeasibility-detection family (Netlib infeasible LPs, SDPLIB infeasible SDPs)."""
 import json, math, sys, collections
 LABELS = {"scs_cpu": "SCS (CPU, MKL Pardiso)", "scs_cudss": "SCS (GPU, cuDSS)", "cuopt": "cuOpt (GPU)", "osqp": "OSQP",
-          "clarabel": "Clarabel", "piqp": "PIQP", "highs": "HiGHS", "pdlp": "PDLP (OR-Tools)", "pdlp_cert4": "PDLP (OR-Tools), certificate tolerance 1e-4", "cvxopt": "CVXOPT", "sdpa": "SDPA"}
+          "clarabel": "Clarabel", "piqp": "PIQP", "highs": "HiGHS", "pdlp": "PDLP (OR-Tools)", "pdlp_cert4": "PDLP (OR-Tools), certificate tolerance 1e-4", "qpo3": "qpo3", "qpo3_nopresolve": "qpo3, presolve off", "cvxopt": "CVXOPT", "sdpa": "SDPA"}
 ORDER = ["scs_cpu", "scs_cudss", "clarabel", "piqp", "highs", "osqp", "pdlp", "pdlp_cert4", "cuopt", "cvxopt", "sdpa"]
 TOL = 1e-3          # one threshold for everyone, the same as the 1e-4 plots (10x the target)
 

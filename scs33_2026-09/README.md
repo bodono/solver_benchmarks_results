@@ -254,7 +254,7 @@ By data set at 1e-6:
 
 ## Infeasible and unbounded problems
 
-Netlib's 29 infeasible LPs (two of them also dual infeasible) and SDPLIB's four infeasible SDPs (two primal infeasible, two unbounded); small problems, a median of 460 variables. SCS, Clarabel, OSQP, PDLP, CVXOPT and QTQP return a certificate (a Farkas ray), checked from the problem data at the 1e-3 threshold; HiGHS, PIQP, cuOpt and SDPA report a status only. A verified certificate of either kind counts as correct; "near-feasible" is an optimal claim whose residuals pass the check (the instance is infeasible by less than the tolerance). The plot shows the certificate-producing solvers, each from the run in which it certified the most (SCS, Clarabel and OSQP at a solve tolerance of 1e-8 with certificate tolerance 1e-4, QTQP at 1e-8, PDLP at 1e-5 with its default certificate tolerance); a verified certificate counts as a solve.
+Netlib's 29 infeasible LPs (two of them also dual infeasible) and SDPLIB's four infeasible SDPs (two primal infeasible, two unbounded); small problems, a median of 460 variables. SCS, Clarabel, OSQP, PDLP, CVXOPT and QTQP return a certificate (a Farkas ray), checked from the problem data at the 1e-3 threshold; HiGHS, PIQP, cuOpt and SDPA report a status only. A verified certificate of either kind counts as correct; "near-feasible" is an optimal claim whose residuals pass the check (the instance is infeasible by less than the tolerance). The plot shows the certificate-producing solvers, each from the run in which it certified the most (SCS, Clarabel and OSQP at a solve tolerance of 1e-8 with certificate tolerance 1e-4, QTQP at 1e-8, PDLP at 1e-5 with its default certificate tolerance); a verified certificate counts as a solve. qpo3 detects most of these in its presolve: 19 of its 28 certificates are produced at zero interior-point iterations, in about a millisecond, which is why its time is so low; the "presolve off" row shows the same solver certifying with the interior-point iterations alone. Both are genuine Farkas certificates of the original problem, checked the same way as everyone else's.
 
 ![infeasibility](figures/all/infeas_1e-8_pair.png)
 
@@ -271,6 +271,7 @@ Netlib's 29 infeasible LPs (two of them also dual infeasible) and SDPLIB's four 
 | QTQP (CPU, MKL Pardiso), 1e-8 | 28 | 0 | 0 | 1 | 0 | 0 | 0.33 s |
 | QTQP (GPU, cuDSS), 1e-8 | 28 | 0 | 0 | 1 | 0 | 0 | 2.78 s |
 | qpo3, 1e-8 (infeasibility tolerance 1e-4) | 28 | 0 | 0 | 0 | 0 | 1 | 0.01 s |
+| qpo3, presolve off, 1e-8 (infeasibility tolerance 1e-4) | 28 | 0 | 0 | 0 | 0 | 1 | 0.25 s |
 | PIQP, 1e-6 | 0 | 17 | 0 | 0 | 0 | 12 | 0.29 s |
 | HiGHS, 1e-6 | 0 | 26 | 0 | 0 | 0 | 3 | 0.02 s |
 | OSQP, 1e-8 | 19 | 0 | 0 | 0 | 0 | 10 | 1.68 s |

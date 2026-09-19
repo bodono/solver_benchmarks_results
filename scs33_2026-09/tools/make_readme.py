@@ -40,7 +40,8 @@ RULE["1e-6"]["clarabel@sdp"] = "1e-8"
 LABELS = {"scs_cpu": "SCS (CPU, MKL Pardiso)", "scs_cudss": "SCS (GPU, cuDSS)", "cuopt": "cuOpt (GPU)", "osqp": "OSQP",
           "clarabel": "Clarabel", "piqp": "PIQP", "proxqp": "ProxQP", "highs": "HiGHS", "pdlp": "PDLP (OR-Tools)",
           "pdlp_cert4": "PDLP (OR-Tools), certificate tolerance 1e-4", "cvxopt": "CVXOPT", "sdpa": "SDPA",
-          "qtqp_mkl": "QTQP (CPU, MKL Pardiso)", "qtqp_cudss": "QTQP (GPU, cuDSS)", "qpo3": "qpo3"}
+          "qtqp_mkl": "QTQP (CPU, MKL Pardiso)", "qtqp_cudss": "QTQP (GPU, cuDSS)", "qpo3": "qpo3",
+          "qpo3_nopresolve": "qpo3, presolve off"}
 DATASET_NAMES = {"maros_meszaros": "Maros-Meszaros", "qplib": "QPLIB", "netlib": "Netlib", "kennington": "Kennington",
                  "miplib_relax": "MIPLIB 2017 relaxations", "mittelmann0": "Mittelmann", "mittelmann1": "Mittelmann",
                  "mittelmann2": "Mittelmann", "sdplib": "SDPLIB", "mittelmann_sdp": "Mittelmann SDPs"}
@@ -133,10 +134,10 @@ def per_dataset_table(family: str, csv_name: str, tol: str) -> str:
 
 # ---------- infeasibility detection ----------
 TOL = 1e-3
-ORDER = ["scs_cpu", "scs_cudss", "clarabel", "qtqp_mkl", "qtqp_cudss", "qpo3", "piqp", "highs", "osqp", "pdlp", "pdlp_cert4", "cuopt", "cvxopt", "sdpa"]
+ORDER = ["scs_cpu", "scs_cudss", "clarabel", "qtqp_mkl", "qtqp_cudss", "qpo3", "qpo3_nopresolve", "piqp", "highs", "osqp", "pdlp", "pdlp_cert4", "cuopt", "cvxopt", "sdpa"]
 SHOW = {"scs_cpu_1e-4", "scs_cpu_1e-8", "scs_cudss_1e-8", "clarabel_1e-8", "osqp_1e-8", "pdlp_1e-5", "cuopt_1e-4",
-        "highs_1e-6", "piqp_1e-6", "qtqp_mkl_1e-8", "qtqp_cudss_1e-8", "qpo3_1e-8"}
-NOTE = {"scs_cpu_1e-8", "scs_cudss_1e-8", "clarabel_1e-8", "qpo3_1e-8"}
+        "highs_1e-6", "piqp_1e-6", "qtqp_mkl_1e-8", "qtqp_cudss_1e-8", "qpo3_1e-8", "qpo3_nopresolve_1e-8"}
+NOTE = {"scs_cpu_1e-8", "scs_cudss_1e-8", "clarabel_1e-8", "qpo3_1e-8", "qpo3_nopresolve_1e-8"}
 
 
 def expected(r):
@@ -240,7 +241,11 @@ def main() -> None:
             "is an optimal claim whose residuals pass the check (the instance is infeasible by less than the tolerance). "
             "The plot shows the certificate-producing solvers, each from the run in which it certified the most (SCS, "
             "Clarabel and OSQP at a solve tolerance of 1e-8 with certificate tolerance 1e-4, QTQP at 1e-8, PDLP at 1e-5 "
-            "with its default certificate tolerance); a verified certificate counts as a solve.", "",
+            "with its default certificate tolerance); a verified certificate counts as a solve. qpo3 detects most of these "
+            "in its presolve: 19 of its 28 certificates are produced at zero interior-point iterations, in about a "
+            "millisecond, which is why its time is so low; the \"presolve off\" row shows the same solver certifying with "
+            "the interior-point iterations alone. Both are genuine Farkas certificates of the original problem, checked "
+            "the same way as everyone else's.", "",
             "![infeasibility](figures/all/infeas_1e-8_pair.png)", "",
             "### Netlib infeasible LPs", "", infeas_table("netlib_infeasible"), "",
             "### SDPLIB infeasible SDPs", "", infeas_table("sdplib_infeasible"), ""]
