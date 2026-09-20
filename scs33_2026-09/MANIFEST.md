@@ -16,8 +16,21 @@ are not shown on the SCS site.
 
 ## Hardware
 
-Identical 4-core Linux x86-64 containers (16 GB; 64 GB for the SDP and Mittelmann families and the
-Clarabel large-PSD attempts) for the CPU solvers; an A100-80GB for SCS cuDSS, QTQP cuDSS and cuOpt.
+CPU solvers ran in Modal containers reserving 4 physical cores (`cpu=4.0`) and 16 GB of memory
+(64 GB for the SDP, Mittelmann, QTQP and qpo3 shards and the Clarabel large-PSD attempts; Modal
+kills a container that exceeds its memory request, so these acted as limits). The hosts are AMD EPYC
+Zen 3 ("Milan", CPU family 25 model 1; gVisor masks the exact model string; AVX2/FMA, no AVX-512,
+one thread per core, observed 1.8-3.1 GHz). Modal's core request is a reservation rather than a cap:
+a container sees 20 cores and may burst above 4, so the workers pin the threading runtimes to 4
+(`OMP_NUM_THREADS=4` for MKL Pardiso, OpenBLAS and other OpenMP code; from 2026-09-20 also
+`RAYON_NUM_THREADS=4`, `MKL_NUM_THREADS=4` and `OPENBLAS_NUM_THREADS=4`). Clarabel, PIQP, OSQP,
+HiGHS and PDLP ran single-threaded at their defaults. qpo3's first runs (2026-09-18) predated the
+Rayon pin and its Faer factorizations could use more than 4 cores; every qpo3 shard was re-run with
+the pin on 2026-09-20 and only the pinned results are kept. Pinning made qpo3 faster, not slower (a
+20-thread Rayon pool on a 4-core reservation was oversubscribed): the same 150 QPs and one more LP
+verified, with the geometric mean over common solves dropping from 0.78 s to 0.53 s on QP and from
+3.06 s to 2.53 s on LP. The GPU solvers (SCS cuDSS, QTQP cuDSS,
+cuOpt) ran on an NVIDIA A100-80GB with 8 reserved host cores and 64 GB.
 
 ## Families (`merged/`)
 
