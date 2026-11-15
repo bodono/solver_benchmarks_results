@@ -16,7 +16,7 @@ data, independent of what the solver reported.
 | Campaign | What | Site |
 |---|---|---|
 | [`scs332_2026-11`](scs332_2026-11/) | Clarabel, CVXOPT, cuOpt, HiGHS, OSQP, PDLP, PIQP, ProxQP, SCS 3.3.2 and SDPA on QP, LP, Mittelmann LP, SDP and infeasible problems, every solver on the same hardware | run for the [SCS benchmarks page](https://www.cvxgrp.org/scs/benchmarks/) (SCS 3.3.2) |
-| [`scs33_2026-09`](scs33_2026-09/) | Clarabel, CVXOPT, cuOpt, HiGHS, OSQP, PDLP, PIQP, ProxQP, qpo3, QTQP, SCS 3.3.1 and SDPA on QP, LP, Mittelmann LP, SDP and infeasible problems, on mixed Modal hardware | run for the SCS 3.3 benchmarks page; replaced by `scs332_2026-11` |
+| [`scs33_2026-09`](scs33_2026-09/) | Clarabel, CVXOPT, cuOpt, HiGHS, OSQP, PDLP, PIQP, ProxQP, qpo3, QTQP, SCS 3.3.1 and SDPA on QP, LP, Mittelmann LP, SDP and infeasible problems, on Modal hosts not controlled or recorded per container | run for the SCS 3.3 benchmarks page; replaced by `scs332_2026-11` |
 
 The latest campaign (`scs332_2026-11`). Largest quarter of the QP and LP sets and the Mittelmann LP set, at 1e-4:
 

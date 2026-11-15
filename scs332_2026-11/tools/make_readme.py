@@ -21,7 +21,8 @@ LIMIT = {"qp": 300.0, "lp": 300.0, "lpbig": 1800.0, "sdp": 900.0}
 FAMILIES = [
     ("qp", "Quadratic programs", "Maros-Meszaros (138) and QPLIB continuous convex (19): 157 problems, 300 s limit.", "qp"),
     ("lp", "Linear programs", "Netlib (93), Kennington (16) and the 240 MIPLIB 2017 benchmark relaxations: 349 problems, 300 s limit.", "lp"),
-    ("lpbig", "Large linear programs: the Mittelmann set", "Hans Mittelmann's LP benchmark set: 37 problems, 1800 s limit, 64 GB containers.", "mittelmann"),
+    ("lpbig", "Large linear programs: the Mittelmann set", "Hans Mittelmann's LP benchmark set: 37 problems, 1800 s limit, 64 GB containers. PIQP and HiGHS ran at "
+     "1e-4 only on this family (as in September) and are shown from that run.", "mittelmann"),
     ("sdp", "Semidefinite programs", "SDPLIB (88 feasible instances) and the Mittelmann SDPs (6): 94 problems, 900 s limit.", "sdp"),
 ]
 # the run each solver is shown from, per plot tolerance (matched by achieved accuracy, as on the SCS site)
@@ -88,12 +89,19 @@ def per_dataset_table(family: str, csv_name: str, tol: str) -> str:
             and (r["dataset"], r["problem"]) not in DROP_PROBLEMS.get(family, set())]
     solver_cols = sorted({c[:-len("_status")] for c in rows[0] if c.endswith("_status")})
     rule = RULE[tol]
-    shown = []
+    runs = collections.defaultdict(set)
     for sid in solver_cols:
         base, stol = sid.rsplit("_", 1)
+        runs[base].add(stol)
+    shown = []
+    for base, have in runs.items():
         want = rule.get(f"{base}@{family}", rule.get(base))
-        if want == stol:
-            shown.append((base, sid))
+        if want is not None and want != tol and want not in have:
+            # as make_figures.py does: a requested run the family lacks falls back to the tightest run
+            # it has (on the Mittelmann LPs PIQP and HiGHS ran at 1e-4 only)
+            want = next((t for t in ("1e-6", "1e-5", "1e-4") if t in have), None)
+        if want in have:
+            shown.append((base, f"{base}_{want}"))
     limit = LIMIT[family]
     datasets = []
     for r in rows:
@@ -210,7 +218,8 @@ def main() -> None:
            "accuracy matches the plot's target: SCS, OSQP and cuOpt from the run at the nominal tolerance, PDLP and "
            "ProxQP from one decade tighter, and the interior-point solvers Clarabel, PIQP, HiGHS, SDPA and CVXOPT from "
            "their 1e-6 runs (Clarabel 1e-8 on SDP). See [MANIFEST.md](MANIFEST.md) for versions, hardware and the full "
-           "rules; the September 2026 campaign (SCS 3.3.1, mixed Modal hardware) is in [`../scs33_2026-09`](../scs33_2026-09).", "",
+           "rules; the September 2026 campaign (SCS 3.3.1, Modal hosts not controlled or recorded per container) is in "
+           "[`../scs33_2026-09`](../scs33_2026-09).", "",
            "Table cells read *verified solves / problems · shifted geometric mean time*. \"Largest quartile\" is the "
            "quarter of the family with the most nonzeros. Raw rows for every solver, tolerance and problem are in "
            "[`merged/`](merged/) and per-problem status and times in [`per_problem/`](per_problem/).", "",

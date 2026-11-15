@@ -74,6 +74,7 @@ PYEOF
 # tools used
 cp $T/assemble2.py $T/figures_tables.sh $T/make_spec.py $T/make_spec_controlled.py $T/make_relaunch_spec.py \
    $T/launch_controlled.sh $T/launch_g2.sh $T/tools/rst_*.py $T/results_repo/make_readme.py $T/results_repo/build_results_dir.sh $R/tools/
+git -C $H show 0c2165f:tools/bench_modal.py > $R/tools/bench_modal.py  # the runner (branch scs332-campaign), see MANIFEST.md
 cp $W/assembly_report.json $R/tables/assembly_report.json
 
 # README from the tables and figures

@@ -6,12 +6,14 @@ so no solver randomly gets a faster cpu". September's kept rows ran on mixed Mod
 the docs compare is produced again on one host type per runner kind:
 
   CPU kinds (cpu, cpu_big, pdlp): AMD Zen 3 Milan, --require-cpu 25/1
-  GPU kinds (gpu, cuopt):         NVIDIA A100 80GB PCIe on Intel 6/106, --require-gpu GPU_HOST_332
+  GPU kinds (gpu, cuopt):         NVIDIA A100-SXM4-80GB on AMD Zen 3 Milan 25/1, --require-gpu GPU_HOST_332
+                                  (first the A100 80GB PCIe on Intel 6/106; changed 14:20, harness 2084139)
 
 Campaigns (fresh volume directories; nothing is resumed from a mixed-host run):
   scs332m  SCS on the CPU, the SDP family (every solver), limit re-solves, infeasible sets
            (already written by make_relaunch_spec.py; running since 13:15)
-  scs332g  SCS on cuDSS: every GPU shard of the scs332 spec, same configs
+  scs332g  SCS on cuDSS: every GPU shard of the scs332 spec, same configs (not used: the same
+           shards ran as scs332gs on the A100-SXM4 target and finally as scs332g2, with #525's cuDSS setting)
   scs332c  every other solver row of the qp, lp, Mittelmann and Netlib-infeasible families:
            the solver ids and tolerances September ran, on the problems September's rows cover,
            with September's dataset options (QTQP and qpo3, record-only, are left out)

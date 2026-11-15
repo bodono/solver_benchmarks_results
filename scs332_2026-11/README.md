@@ -1,6 +1,6 @@
 # Solver benchmark campaign, November 2026 (SCS 3.3.2)
 
-Clarabel, CVXOPT, cuOpt, HiGHS, OSQP, PDLP (OR-Tools), PIQP, ProxQP, SCS 3.3.2 and SDPA on standard QP, LP, SDP and infeasible test sets, run on Modal. Every solver ran on the same hardware: the CPU solvers in 4-core containers on AMD EPYC Zen 3 (Milan) hosts, the GPU solvers (SCS with cuDSS, cuOpt) on an NVIDIA A100-SXM4-80GB with an AMD EPYC Zen 3 host; containers on other hardware handed their jobs back, and each container's CPU, GPU and solver versions are recorded with its rows. Every solve is re-verified from the problem data at ten times the plot's target tolerance, so a "solve" below means a verified solution, whatever the solver reported. Failures are charged three times the time limit in the shifted geometric means (shift 10 s); a solve finishing after the limit plus 60 s counts as a failure. Because a requested tolerance means different things to different solvers, each plot shows every solver from the run whose achieved accuracy matches the plot's target: SCS, OSQP and cuOpt from the run at the nominal tolerance, PDLP and ProxQP from one decade tighter, and the interior-point solvers Clarabel, PIQP, HiGHS, SDPA and CVXOPT from their 1e-6 runs (Clarabel 1e-8 on SDP). See [MANIFEST.md](MANIFEST.md) for versions, hardware and the full rules; the September 2026 campaign (SCS 3.3.1, mixed Modal hardware) is in [`../scs33_2026-09`](../scs33_2026-09).
+Clarabel, CVXOPT, cuOpt, HiGHS, OSQP, PDLP (OR-Tools), PIQP, ProxQP, SCS 3.3.2 and SDPA on standard QP, LP, SDP and infeasible test sets, run on Modal. Every solver ran on the same hardware: the CPU solvers in 4-core containers on AMD EPYC Zen 3 (Milan) hosts, the GPU solvers (SCS with cuDSS, cuOpt) on an NVIDIA A100-SXM4-80GB with an AMD EPYC Zen 3 host; containers on other hardware handed their jobs back, and each container's CPU, GPU and solver versions are recorded with its rows. Every solve is re-verified from the problem data at ten times the plot's target tolerance, so a "solve" below means a verified solution, whatever the solver reported. Failures are charged three times the time limit in the shifted geometric means (shift 10 s); a solve finishing after the limit plus 60 s counts as a failure. Because a requested tolerance means different things to different solvers, each plot shows every solver from the run whose achieved accuracy matches the plot's target: SCS, OSQP and cuOpt from the run at the nominal tolerance, PDLP and ProxQP from one decade tighter, and the interior-point solvers Clarabel, PIQP, HiGHS, SDPA and CVXOPT from their 1e-6 runs (Clarabel 1e-8 on SDP). See [MANIFEST.md](MANIFEST.md) for versions, hardware and the full rules; the September 2026 campaign (SCS 3.3.1, Modal hosts not controlled or recorded per container) is in [`../scs33_2026-09`](../scs33_2026-09).
 
 Table cells read *verified solves / problems · shifted geometric mean time*. "Largest quartile" is the quarter of the family with the most nonzeros. Raw rows for every solver, tolerance and problem are in [`merged/`](merged/) and per-problem status and times in [`per_problem/`](per_problem/).
 
@@ -144,7 +144,7 @@ By data set at 1e-6:
 
 ## Large linear programs: the Mittelmann set
 
-Hans Mittelmann's LP benchmark set: 37 problems, 1800 s limit, 64 GB containers.
+Hans Mittelmann's LP benchmark set: 37 problems, 1800 s limit, 64 GB containers. PIQP and HiGHS ran at 1e-4 only on this family (as in September) and are shown from that run.
 
 | Solver | 1e-4, all | 1e-4, largest quartile | 1e-5, all | 1e-5, largest quartile |
 |---|---|---|---|---|
@@ -180,7 +180,9 @@ By data set at 1e-4:
 | SCS (CPU, MKL Pardiso) | 24/37 · 361.1 s |
 | Clarabel | 21/37 · 693.1 s |
 | PDLP (OR-Tools) | 19/37 · 737.8 s |
+| PIQP | 12/37 · 1332.3 s |
 | cuOpt (GPU) | 8/37 · 1748.4 s |
+| HiGHS | 9/37 · 2947.2 s |
 
 ## Semidefinite programs
 

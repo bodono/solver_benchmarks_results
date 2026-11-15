@@ -1,8 +1,12 @@
 #!/bin/bash
 # The controlled-hardware completion of the SCS 3.3.2 refresh (make_spec_controlled.py):
-# CPU kinds on AMD Zen 3 Milan only, GPU kinds on the A100 80GB PCIe with an Intel 6/106 host.
+# CPU kinds on AMD Zen 3 Milan only, GPU kinds on the NVIDIA A100-SXM4-80GB with an AMD Zen 3
+# Milan (25/1) host. The first launch (13:41, harness 1e5f921) targeted the A100 80GB PCIe on an
+# Intel 6/106 host; that type became scarce and the target changed at 14:20 (harness 2084139).
 # SPEC defaults to campaign/scs332_controlled/campaign.json (scs332g + scs332c); a spec that
-# also lists the unfinished scs332m shards runs everything in one orchestrator.
+# also lists the unfinished scs332m shards runs everything in one orchestrator. scs332g is not
+# used: SCS on cuDSS ran as scs332gs from 14:22 and finally as scs332g2 (launch_g2.sh), the
+# same shards with cvxgrp/scs#525's cuDSS setting.
 # Usage: launch_controlled.sh BUDGET_USD   (spend counts from $0 for this orchestrator)
 set -u
 BUDGET=${1:?budget in USD}

@@ -1,11 +1,15 @@
 # SCS 3.3.2 benchmark campaign, November 2026
 
-Run 2026-11-14 (CPU solvers) and 2026-11-15 (GPU solvers) on [Modal](https://modal.com) with
-[bodono/solver_benchmarks](https://github.com/bodono/solver_benchmarks) at master `7330423` (every loader and scoring
-fix up to #122) plus runner-only commits on branch `scs332-campaign` (`tools/bench_modal.py`: version pins, SCS built
-from source, hardware filters; the CPU shards ran at `3bb8c9a` to `2084139`, the GPU run at `0c2165f`). Results feed
-the SCS documentation's benchmarks page (cvxgrp/scs, docs/src/benchmarks). It replaces the September 2026 campaign
-([`../scs33_2026-09`](../scs33_2026-09), SCS 3.3.1) for the page: every row here was produced again in November;
+Run 2026-11-14 (every CPU solver and cuOpt) and 2026-11-15 (SCS with cuDSS, and the two Clarabel fill shards) on
+[Modal](https://modal.com) with [bodono/solver_benchmarks](https://github.com/bodono/solver_benchmarks) at master
+`7330423` (every loader and scoring fix up to #122) plus runner-only commits on branch `scs332-campaign`, which change
+only `tools/bench_modal.py` (version pins, SCS built from source, hardware filters, host records). The 2026-11-14
+containers ran at `3bb8c9a` to `2084139`, the 2026-11-15 ones at `0c2165f`. [`tools/bench_modal.py`](tools/bench_modal.py)
+is that file at `0c2165f`; the earlier commits differ from it only in the GPU host filter, the cuOpt version pin
+(cuOpt ran at `2084139`, which has it), the package lines of `host.txt` (from `abcccde`) and the orchestrator's
+bookkeeping, not in the CPU images or in how a shard is run. Results feed the SCS documentation's benchmarks page
+(cvxgrp/scs, docs/src/benchmarks). It replaces the September 2026 campaign ([`../scs33_2026-09`](../scs33_2026-09),
+SCS 3.3.1) for the page: every row here was produced again in November;
 nothing is carried over from September (Clarabel was not run again on four SDPs, see `sdp` below).
 
 ## Solvers
@@ -31,8 +35,9 @@ container checked its hardware on start, and one on another type handed its job 
 - GPU solvers (SCS with cuDSS, cuOpt): NVIDIA A100-SXM4-80GB with 8 cores of an AMD EPYC Zen 3 Milan host, 64 GB.
 
 Each shard's `host.txt` (in the release archive) has one block per container that ran it: start time, Modal task
-id, rows found, CPU family/model, GPU, solver package versions and the SCS build; the assembly refuses any shard
-with a container on other hardware, another SCS build or another solver version (`tools/assemble2.py`).
+id, rows found, CPU family/model, GPU, solver package versions (from `abcccde` on; every row also records them) and
+the SCS build; the assembly refuses any shard with a container on other hardware, another SCS build or another solver
+version (`tools/assemble2.py`).
 In the 459 shards used, 603 containers ran: 488 CPU containers (204 standard, 217 large-memory and 67 PDLP), all
 on Zen 3 Milan, and 115 GPU containers (87 SCS with cuDSS, 28 cuOpt), all on an A100-SXM4-80GB with a Milan host.
 
@@ -52,7 +57,9 @@ other two runs) until Modal dropped the input. Those two problems are recorded a
 on the same GPU host type, and is not used.
 
 The problem lists, solver ids and tolerances are September's (`tools/make_spec.py`, `tools/make_spec_controlled.py`).
-Earlier November runs on unfiltered hardware (campaigns `scs332`, `scs332g`) are not used.
+Earlier November runs are not used: `scs332` (unfiltered hardware) and `scs332g` (SCS on cuDSS on the first GPU
+target, the A100 80GB PCIe with an Intel 6/106 host, given up when that type became scarce; `scs332g2` runs the same
+shards).
 
 ## Families (`merged/`)
 
