@@ -1,0 +1,20 @@
+run:
+  datasets:
+  - id: mittelmann1
+    include:
+    - dlr1
+    - physiciansched3-3
+    name: mittelmann
+  name: lpbig_mittelmann1_clarabel_1e-6_p1
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 1860.0
+solvers:
+- id: clarabel_1e-6
+  settings:
+    time_limit: 1800.0
+    tol_feas: 1.0e-06
+    tol_gap_abs: 1.0e-06
+    tol_gap_rel: 1.0e-06
+  solver: clarabel

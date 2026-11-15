@@ -1,0 +1,77 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - CMS750_4
+    - app1-1
+    - app1-2
+    - bab6
+    - binkar10_1
+    - blp-ic98
+    - bppc4-08
+    - chromaticindex1024-7
+    - comp21-2idx
+    - dano3_5
+    - fast0507
+    - fhnw-binpack4-48
+    - gen-ip054
+    - glass4
+    - gmu-35-50
+    - h80x6320d
+    - hypothyroid-k1
+    - icir97_tension
+    - k1mushroom
+    - markshare_4_0
+    - mc11
+    - n2seq36q
+    - neos-1171448
+    - neos-1354092
+    - neos-1582420
+    - neos-2657525-crna
+    - neos-3083819-nubu
+    - neos-3381206-awhea
+    - neos-3402294-bobin
+    - neos-3656078-kumeu
+    - neos-4300652-rahue
+    - neos-4338804-snowy
+    - neos-4387871-tavua
+    - neos-4722843-widden
+    - neos-4763324-toguru
+    - neos-4954672-berkel
+    - neos-662469
+    - neos-848589
+    - neos-860300
+    - neos-960392
+    - neos17
+    - nexp-150-20-8-5
+    - peg-solitaire-a3
+    - pg
+    - physiciansched3-3
+    - physiciansched6-2
+    - proteindesign122trx11p8
+    - roll3000
+    - s100
+    - seymour1
+    - supportcase12
+    - supportcase40
+    - supportcase42
+    - supportcase7
+    - trento1
+    - triptim1
+    - uccase12
+    - unitcal_7
+    - var-smallemery-m6j6
+    name: miplib
+  name: lp_miplib_relax_scs_cpu_1e-6_p2
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: scs_cpu_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iters: 1000000
+    time_limit_secs: 300.0
+  solver: scs

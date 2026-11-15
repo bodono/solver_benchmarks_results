@@ -1,0 +1,77 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - 50v-10
+    - app1-1
+    - app1-2
+    - beasleyC3
+    - blp-ic98
+    - bnatt400
+    - bppc4-08
+    - chromaticindex512-7
+    - comp21-2idx
+    - cost266-UUE
+    - cryptanalysiskb128n5obj14
+    - csched008
+    - dano3_5
+    - enlight_hard
+    - ex9
+    - fhnw-binpack4-48
+    - graphdraw-domain
+    - highschool1-aigio
+    - ic97_potential
+    - istanbul-no-cutoff
+    - leo2
+    - mas76
+    - mcsched
+    - mzzv11
+    - n3div36
+    - n5-3
+    - neos-3216931-puriri
+    - neos-3754224-navua
+    - neos-4532248-waihi
+    - neos-5052403-cygnet
+    - neos-5093327-huahum
+    - neos-5195221-niemur
+    - neos-631710
+    - neos-827175
+    - neos-960392
+    - neos859080
+    - net12
+    - netdiversion
+    - ns1644855
+    - ns1760995
+    - ns1952667
+    - nu25-pr12
+    - opm2-z10-s4
+    - pg
+    - physiciansched3-3
+    - proteindesign121hz512p9
+    - radiationm18-12-05
+    - rmatr100-p10
+    - rmatr200-p5
+    - rococoB10-011000
+    - sct2
+    - sp150x300d
+    - sp97ar
+    - supportcase33
+    - supportcase42
+    - swath1
+    - tbfp-network
+    - uct-subprob
+    name: miplib
+  name: lp_miplib_relax_scs_cudss_1e-6_p3
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: scs_cudss_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    linear_solver: cudss
+    max_iters: 1000000
+    time_limit_secs: 300.0
+  solver: scs

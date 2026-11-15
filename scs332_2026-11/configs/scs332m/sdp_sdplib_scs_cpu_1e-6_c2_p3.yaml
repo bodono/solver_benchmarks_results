@@ -1,0 +1,22 @@
+run:
+  datasets:
+  - id: sdplib
+    include:
+    - gpp100
+    - gpp250-4
+    - gpp500-1
+    - truss8
+    name: sdplib
+  name: sdp_sdplib_scs_cpu_1e-6_c2_p3
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 960.0
+solvers:
+- id: scs_cpu_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iters: 1000000
+    time_limit_secs: 900.0
+  solver: scs

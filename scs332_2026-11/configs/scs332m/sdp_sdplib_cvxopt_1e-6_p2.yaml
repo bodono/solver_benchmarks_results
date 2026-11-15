@@ -1,0 +1,47 @@
+run:
+  datasets:
+  - id: sdplib
+    include:
+    - arch4
+    - arch8
+    - control10
+    - control11
+    - control6
+    - control8
+    - equalG11
+    - gpp100
+    - gpp124-2
+    - gpp250-1
+    - gpp250-4
+    - hinf14
+    - hinf3
+    - hinf6
+    - hinf8
+    - maxG11
+    - maxG32
+    - maxG55
+    - maxG60
+    - mcp250-1
+    - mcp250-3
+    - qap5
+    - qap6
+    - qap7
+    - qap8
+    - qpG11
+    - theta5
+    - thetaG51
+    - truss4
+    - truss6
+    name: sdplib
+  name: sdp_sdplib_cvxopt_1e-6_p2
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 960.0
+solvers:
+- id: cvxopt_1e-6
+  settings:
+    abstol: 1.0e-06
+    feastol: 1.0e-06
+    reltol: 1.0e-06
+  solver: cvxopt

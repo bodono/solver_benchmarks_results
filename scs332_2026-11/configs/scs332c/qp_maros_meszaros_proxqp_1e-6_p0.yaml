@@ -1,0 +1,37 @@
+run:
+  datasets:
+  - id: maros_meszaros
+    include:
+    - BOYD1
+    - CONT-200
+    - CVXQP3_L
+    - DUALC2
+    - DUALC5
+    - HS118
+    - HS268
+    - LISWET10
+    - LISWET3
+    - LISWET7
+    - PRIMAL1
+    - PRIMAL4
+    - PRIMALC5
+    - QRECIPE
+    - QSHIP08L
+    - S268
+    - UBH1
+    - VALUES
+    - ZECEVIC2
+    name: maros_meszaros
+  name: qp_maros_meszaros_proxqp_1e-6_p0
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: proxqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: proxqp

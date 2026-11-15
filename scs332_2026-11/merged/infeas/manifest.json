@@ -1,0 +1,2659 @@
+{
+  "run_id": "infeas_netlib_infeasible_clarabel_1e-6_inf",
+  "created_at_utc": "2026-11-14T14:25:56.081367+00:00",
+  "config": {
+    "name": "infeas_netlib_infeasible_clarabel_1e-6_inf",
+    "datasets": [
+      {
+        "id": "netlib_infeasible",
+        "name": "netlib",
+        "dataset_options": {
+          "subset": "infeasible"
+        },
+        "include": [],
+        "exclude": []
+      },
+      {
+        "id": "sdplib_infeasible",
+        "name": "sdplib",
+        "dataset_options": {
+          "subset": "infeasible"
+        },
+        "include": [
+          "infd1",
+          "infd2",
+          "infp1",
+          "infp2"
+        ],
+        "exclude": []
+      }
+    ],
+    "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+    "parallelism": 1,
+    "resume": true,
+    "max_worker_error_retries": 2,
+    "worker_memory_limit_mb": null,
+    "timeout_seconds": 360.0,
+    "fail_on_unsupported": false,
+    "auto_prepare_data": false,
+    "config_hash": "71515430736d",
+    "solvers": [
+      {
+        "id": "clarabel_1e-6",
+        "solver": "clarabel",
+        "settings": {
+          "time_limit": 300.0,
+          "tol_feas": 1e-06,
+          "tol_gap_abs": 1e-06,
+          "tol_gap_rel": 1e-06,
+          "tol_infeas_abs": 1e-06,
+          "tol_infeas_rel": 1e-06
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "clarabel_1e-8",
+        "solver": "clarabel",
+        "settings": {
+          "time_limit": 300.0,
+          "tol_feas": 1e-08,
+          "tol_gap_abs": 1e-08,
+          "tol_gap_rel": 1e-08,
+          "tol_infeas_abs": 0.0001,
+          "tol_infeas_rel": 0.0001
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "cuopt_1e-4",
+        "solver": "cuopt",
+        "settings": {
+          "eps": 0.0001,
+          "time_limit": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "highs_1e-6",
+        "solver": "highs",
+        "settings": {
+          "dual_feasibility_tolerance": 1e-06,
+          "primal_feasibility_tolerance": 1e-06,
+          "time_limit": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "osqp_1e-4",
+        "solver": "osqp",
+        "settings": {
+          "eps_abs": 0.0001,
+          "eps_rel": 0.0001,
+          "max_iter": 1000000,
+          "time_limit": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "osqp_1e-6",
+        "solver": "osqp",
+        "settings": {
+          "eps_abs": 1e-06,
+          "eps_rel": 1e-06,
+          "max_iter": 1000000,
+          "time_limit": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "osqp_1e-8",
+        "solver": "osqp",
+        "settings": {
+          "eps_abs": 1e-08,
+          "eps_dual_inf": 0.0001,
+          "eps_prim_inf": 0.0001,
+          "eps_rel": 1e-08,
+          "max_iter": 1000000,
+          "time_limit": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "pdlp_1e-5",
+        "solver": "pdlp",
+        "settings": {
+          "eps_abs": 1e-05,
+          "eps_rel": 1e-05,
+          "solver_time_limit_sec": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "pdlp_cert4_1e-5",
+        "solver": "pdlp",
+        "settings": {
+          "eps_abs": 1e-05,
+          "eps_rel": 1e-05,
+          "parameters_text": "termination_criteria { eps_primal_infeasible: 1e-4 eps_dual_infeasible: 1e-4 }",
+          "solver_time_limit_sec": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "piqp_1e-6",
+        "solver": "piqp",
+        "settings": {
+          "eps_abs": 1e-06,
+          "eps_rel": 1e-06,
+          "max_iter": 1000000,
+          "time_limit": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "scs_cudss_1e-4",
+        "solver": "scs",
+        "settings": {
+          "eps_abs": 0.0001,
+          "eps_infeas": 0.0001,
+          "eps_rel": 0.0001,
+          "linear_solver": "cudss",
+          "max_iters": 1000000,
+          "time_limit_secs": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "scs_cudss_1e-6",
+        "solver": "scs",
+        "settings": {
+          "eps_abs": 1e-06,
+          "eps_infeas": 1e-06,
+          "eps_rel": 1e-06,
+          "linear_solver": "cudss",
+          "max_iters": 1000000,
+          "time_limit_secs": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "scs_cudss_1e-8",
+        "solver": "scs",
+        "settings": {
+          "eps_abs": 1e-08,
+          "eps_infeas": 0.0001,
+          "eps_rel": 1e-08,
+          "linear_solver": "cudss",
+          "max_iters": 1000000,
+          "time_limit_secs": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "scs_cpu_1e-4",
+        "solver": "scs",
+        "settings": {
+          "eps_abs": 0.0001,
+          "eps_infeas": 0.0001,
+          "eps_rel": 0.0001,
+          "max_iters": 1000000,
+          "time_limit_secs": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "scs_cpu_1e-6",
+        "solver": "scs",
+        "settings": {
+          "eps_abs": 1e-06,
+          "eps_infeas": 1e-06,
+          "eps_rel": 1e-06,
+          "max_iters": 1000000,
+          "time_limit_secs": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "scs_cpu_1e-8",
+        "solver": "scs",
+        "settings": {
+          "eps_abs": 1e-08,
+          "eps_infeas": 0.0001,
+          "eps_rel": 1e-08,
+          "max_iters": 1000000,
+          "time_limit_secs": 300.0
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "cvxopt_1e-6",
+        "solver": "cvxopt",
+        "settings": {
+          "abstol": 1e-06,
+          "feastol": 1e-06,
+          "reltol": 1e-06
+        },
+        "timeout_seconds": null
+      },
+      {
+        "id": "sdpa_1e-6",
+        "solver": "sdpa",
+        "settings": {
+          "eps_abs": 1e-06,
+          "eps_rel": 1e-06,
+          "time_limit": 900.0
+        },
+        "timeout_seconds": null
+      }
+    ]
+  },
+  "system": {
+    "python_executable": "python",
+    "python_version": "3.12.10",
+    "python_implementation": "CPython",
+    "python_compiler": "GCC 12.2.0",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "system": "Linux",
+    "release": "4.19.0-gvisor",
+    "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+    "machine": "x86_64",
+    "processor": "",
+    "cpu": {
+      "logical_count": 20,
+      "physical_count": 20,
+      "max_frequency_mhz": null,
+      "current_frequency_mhz": 3049.9939999999992,
+      "model": "unknown"
+    },
+    "memory": {
+      "total_bytes": 184499564544,
+      "available_bytes": 184194347008,
+      "swap_total_bytes": 0
+    },
+    "library_versions": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "pandas": "3.1.1",
+      "pyarrow": "26.0.1",
+      "clarabel": "0.11.1",
+      "cplex": null,
+      "cpo3": null,
+      "cuopt": null,
+      "cuopt-cu12": null,
+      "cvxopt": "1.3.3",
+      "ecos": "2.0.14",
+      "gurobipy": null,
+      "highspy": "1.15.1",
+      "mosek": null,
+      "ortools": "9.15.6755",
+      "osqp": "1.1.3",
+      "piqp": "0.6.4",
+      "proxsuite": "0.7.3",
+      "qtqp": null,
+      "scs": "3.3.2",
+      "sdpa-python": "0.2.3"
+    }
+  },
+  "derived": {
+    "kind": "merge",
+    "sources": [
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332c/infeas_netlib_infeasible_clarabel_1e-6_inf",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332c/infeas_netlib_infeasible_clarabel_1e-8_inf4",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332c/infeas_netlib_infeasible_cuopt_1e-4",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332c/infeas_netlib_infeasible_highs_1e-6",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332c/infeas_netlib_infeasible_osqp_1e-4",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332c/infeas_netlib_infeasible_osqp_1e-6",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332c/infeas_netlib_infeasible_osqp_1e-8_inf4",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332c/infeas_netlib_infeasible_pdlp_1e-5",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332c/infeas_netlib_infeasible_pdlp_cert4_1e-5",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332c/infeas_netlib_infeasible_piqp_1e-6",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332g2/infeas_netlib_infeasible_scs_cudss_1e-4_inf",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332g2/infeas_netlib_infeasible_scs_cudss_1e-6_inf",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332g2/infeas_netlib_infeasible_scs_cudss_1e-8_inf4",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332g2/infeas_sdplib_infeasible_scs_cudss_1e-4_inf",
+        "rows": 4
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332m/infeas_netlib_infeasible_scs_cpu_1e-4_inf",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332m/infeas_netlib_infeasible_scs_cpu_1e-6_inf",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332m/infeas_netlib_infeasible_scs_cpu_1e-8_inf4",
+        "rows": 29
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332m/infeas_sdplib_infeasible_clarabel_1e-8",
+        "rows": 4
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332m/infeas_sdplib_infeasible_cvxopt_1e-6",
+        "rows": 4
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332m/infeas_sdplib_infeasible_scs_cpu_1e-4_inf",
+        "rows": 4
+      },
+      {
+        "run_dir": "/Users/bodonoghue/scs33_tools/refresh_332/assembly_final/scs332m/infeas_sdplib_infeasible_sdpa_1e-6",
+        "rows": 4
+      }
+    ],
+    "source_manifests": [
+      {
+        "run_id": "infeas_netlib_infeasible_clarabel_1e-6_inf",
+        "created_at_utc": "2026-11-14T14:25:56.081367+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_clarabel_1e-6_inf",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "71515430736d",
+          "solvers": [
+            {
+              "id": "clarabel_1e-6",
+              "solver": "clarabel",
+              "settings": {
+                "time_limit": 300.0,
+                "tol_feas": 1e-06,
+                "tol_gap_abs": 1e-06,
+                "tol_gap_rel": 1e-06,
+                "tol_infeas_abs": 1e-06,
+                "tol_infeas_rel": 1e-06
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3049.9939999999992,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 184499564544,
+            "available_bytes": 184194347008,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_clarabel_1e-8_inf4",
+        "created_at_utc": "2026-11-14T14:25:55.091289+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_clarabel_1e-8_inf4",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "c7f44b8c2ebb",
+          "solvers": [
+            {
+              "id": "clarabel_1e-8",
+              "solver": "clarabel",
+              "settings": {
+                "time_limit": 300.0,
+                "tol_feas": 1e-08,
+                "tol_gap_abs": 1e-08,
+                "tol_gap_rel": 1e-08,
+                "tol_infeas_abs": 0.0001,
+                "tol_infeas_rel": 0.0001
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3050.0,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 184499560448,
+            "available_bytes": 184196214784,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_cuopt_1e-4",
+        "created_at_utc": "2026-11-14T18:54:54.314938+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_cuopt_1e-4",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "fd0df07e4cd4",
+          "solvers": [
+            {
+              "id": "cuopt_1e-4",
+              "solver": "cuopt",
+              "settings": {
+                "eps": 0.0001,
+                "time_limit": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 24,
+            "physical_count": 24,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3249.6299999999997,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 1099511627776,
+            "available_bytes": 1099208540160,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.4.6",
+            "scipy": "1.18.1",
+            "pandas": "3.0.3",
+            "pyarrow": "23.0.1",
+            "clarabel": null,
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": "26.8.0",
+            "cvxopt": null,
+            "ecos": null,
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": null,
+            "osqp": null,
+            "piqp": null,
+            "proxsuite": null,
+            "qtqp": null,
+            "scs": "3.3.1",
+            "sdpa-python": null
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_highs_1e-6",
+        "created_at_utc": "2026-11-14T16:03:36.399222+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_highs_1e-6",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "77502241901d",
+          "solvers": [
+            {
+              "id": "highs_1e-6",
+              "solver": "highs",
+              "settings": {
+                "dual_feasibility_tolerance": 1e-06,
+                "primal_feasibility_tolerance": 1e-06,
+                "time_limit": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3084.873,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 425706909696,
+            "available_bytes": 425401442304,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_osqp_1e-4",
+        "created_at_utc": "2026-11-14T16:14:24.586254+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_osqp_1e-4",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "1c0d073c5a75",
+          "solvers": [
+            {
+              "id": "osqp_1e-4",
+              "solver": "osqp",
+              "settings": {
+                "eps_abs": 0.0001,
+                "eps_rel": 0.0001,
+                "max_iter": 1000000,
+                "time_limit": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3090.0179999999987,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 425706909696,
+            "available_bytes": 425401430016,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_osqp_1e-6",
+        "created_at_utc": "2026-11-14T16:04:33.816231+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_osqp_1e-6",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "8f57e599cbd7",
+          "solvers": [
+            {
+              "id": "osqp_1e-6",
+              "solver": "osqp",
+              "settings": {
+                "eps_abs": 1e-06,
+                "eps_rel": 1e-06,
+                "max_iter": 1000000,
+                "time_limit": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 2918.811999999999,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 425706921984,
+            "available_bytes": 425401806848,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_osqp_1e-8_inf4",
+        "created_at_utc": "2026-11-14T16:06:25.107542+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_osqp_1e-8_inf4",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "ff637ece21b9",
+          "solvers": [
+            {
+              "id": "osqp_1e-8",
+              "solver": "osqp",
+              "settings": {
+                "eps_abs": 1e-08,
+                "eps_dual_inf": 0.0001,
+                "eps_prim_inf": 0.0001,
+                "eps_rel": 1e-08,
+                "max_iter": 1000000,
+                "time_limit": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3084.873,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 425706909696,
+            "available_bytes": 425401446400,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_pdlp_1e-5",
+        "created_at_utc": "2026-11-14T17:42:46.760024+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_pdlp_1e-5",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "0bf6308fc883",
+          "solvers": [
+            {
+              "id": "pdlp_1e-5",
+              "solver": "pdlp",
+              "settings": {
+                "eps_abs": 1e-05,
+                "eps_rel": 1e-05,
+                "solver_time_limit_sec": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 2449.9959999999996,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 353621696512,
+            "available_bytes": 353313832960,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.0.5",
+            "pyarrow": "25.0.1",
+            "clarabel": null,
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": null,
+            "ecos": null,
+            "gurobipy": null,
+            "highspy": "1.11.0",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": null,
+            "piqp": null,
+            "proxsuite": null,
+            "qtqp": null,
+            "scs": "3.3.1",
+            "sdpa-python": null
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_pdlp_cert4_1e-5",
+        "created_at_utc": "2026-11-14T17:49:22.307039+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_pdlp_cert4_1e-5",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "798a7ae58d55",
+          "solvers": [
+            {
+              "id": "pdlp_cert4_1e-5",
+              "solver": "pdlp",
+              "settings": {
+                "eps_abs": 1e-05,
+                "eps_rel": 1e-05,
+                "parameters_text": "termination_criteria { eps_primal_infeasible: 1e-4 eps_dual_infeasible: 1e-4 }",
+                "solver_time_limit_sec": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3093.822,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 425706934272,
+            "available_bytes": 425399500800,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.0.5",
+            "pyarrow": "25.0.1",
+            "clarabel": null,
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": null,
+            "ecos": null,
+            "gurobipy": null,
+            "highspy": "1.11.0",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": null,
+            "piqp": null,
+            "proxsuite": null,
+            "qtqp": null,
+            "scs": "3.3.1",
+            "sdpa-python": null
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_piqp_1e-6",
+        "created_at_utc": "2026-11-14T14:26:20.145134+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_piqp_1e-6",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "6b7d7ee130ec",
+          "solvers": [
+            {
+              "id": "piqp_1e-6",
+              "solver": "piqp",
+              "settings": {
+                "eps_abs": 1e-06,
+                "eps_rel": 1e-06,
+                "max_iter": 1000000,
+                "time_limit": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3180.470999999999,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 425706926080,
+            "available_bytes": 425399713792,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_scs_cudss_1e-4_inf",
+        "created_at_utc": "2026-11-15T06:28:28.428878+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_scs_cudss_1e-4_inf",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "a87e04c5a7dc",
+          "solvers": [
+            {
+              "id": "scs_cudss_1e-4",
+              "solver": "scs",
+              "settings": {
+                "eps_abs": 0.0001,
+                "eps_infeas": 0.0001,
+                "eps_rel": 0.0001,
+                "linear_solver": "cudss",
+                "max_iters": 1000000,
+                "time_limit_secs": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.1",
+          "python_implementation": "CPython",
+          "python_compiler": "Clang 17.0.6 ",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "x86_64",
+          "cpu": {
+            "logical_count": 24,
+            "physical_count": 24,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3247.207,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 1099511627776,
+            "available_bytes": 1099198291968,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.4.6",
+            "scipy": "1.18.1",
+            "pandas": "3.0.6",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": "26.10.1",
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.7.0",
+            "proxsuite": "0.8.2",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_scs_cudss_1e-6_inf",
+        "created_at_utc": "2026-11-15T06:31:59.791905+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_scs_cudss_1e-6_inf",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "bc37139945ec",
+          "solvers": [
+            {
+              "id": "scs_cudss_1e-6",
+              "solver": "scs",
+              "settings": {
+                "eps_abs": 1e-06,
+                "eps_infeas": 1e-06,
+                "eps_rel": 1e-06,
+                "linear_solver": "cudss",
+                "max_iters": 1000000,
+                "time_limit_secs": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.1",
+          "python_implementation": "CPython",
+          "python_compiler": "Clang 17.0.6 ",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "x86_64",
+          "cpu": {
+            "logical_count": 24,
+            "physical_count": 24,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3249.884,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 1099511627776,
+            "available_bytes": 1099198263296,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.4.6",
+            "scipy": "1.18.1",
+            "pandas": "3.0.6",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": "26.10.1",
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.7.0",
+            "proxsuite": "0.8.2",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_scs_cudss_1e-8_inf4",
+        "created_at_utc": "2026-11-15T06:33:24.327202+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_scs_cudss_1e-8_inf4",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "f42ddf440e5f",
+          "solvers": [
+            {
+              "id": "scs_cudss_1e-8",
+              "solver": "scs",
+              "settings": {
+                "eps_abs": 1e-08,
+                "eps_infeas": 0.0001,
+                "eps_rel": 1e-08,
+                "linear_solver": "cudss",
+                "max_iters": 1000000,
+                "time_limit_secs": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.1",
+          "python_implementation": "CPython",
+          "python_compiler": "Clang 17.0.6 ",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "x86_64",
+          "cpu": {
+            "logical_count": 24,
+            "physical_count": 24,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3247.207,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 1099511627776,
+            "available_bytes": 1099196198912,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.4.6",
+            "scipy": "1.18.1",
+            "pandas": "3.0.6",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": "26.10.1",
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.7.0",
+            "proxsuite": "0.8.2",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_sdplib_infeasible_scs_cudss_1e-4_inf",
+        "created_at_utc": "2026-11-15T06:30:56.226996+00:00",
+        "config": {
+          "name": "infeas_sdplib_infeasible_scs_cudss_1e-4_inf",
+          "datasets": [
+            {
+              "id": "sdplib_infeasible",
+              "name": "sdplib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [
+                "infd1",
+                "infd2",
+                "infp1",
+                "infp2"
+              ],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 960.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "6e7210e2ba04",
+          "solvers": [
+            {
+              "id": "scs_cudss_1e-4",
+              "solver": "scs",
+              "settings": {
+                "eps_abs": 0.0001,
+                "eps_infeas": 0.0001,
+                "eps_rel": 0.0001,
+                "linear_solver": "cudss",
+                "max_iters": 1000000,
+                "time_limit_secs": 900.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.1",
+          "python_implementation": "CPython",
+          "python_compiler": "Clang 17.0.6 ",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "x86_64",
+          "cpu": {
+            "logical_count": 24,
+            "physical_count": 24,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3247.207,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 1099511627776,
+            "available_bytes": 1099196178432,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.4.6",
+            "scipy": "1.18.1",
+            "pandas": "3.0.6",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": "26.10.1",
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.7.0",
+            "proxsuite": "0.8.2",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_scs_cpu_1e-4_inf",
+        "created_at_utc": "2026-11-14T13:07:03.791541+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_scs_cpu_1e-4_inf",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "ef732fbe87c0",
+          "solvers": [
+            {
+              "id": "scs_cpu_1e-4",
+              "solver": "scs",
+              "settings": {
+                "eps_abs": 0.0001,
+                "eps_infeas": 0.0001,
+                "eps_rel": 0.0001,
+                "max_iters": 1000000,
+                "time_limit_secs": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 2449.9959999999996,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 353621684224,
+            "available_bytes": 353316483072,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_scs_cpu_1e-6_inf",
+        "created_at_utc": "2026-11-14T13:15:36.483144+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_scs_cpu_1e-6_inf",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "063fee58d283",
+          "solvers": [
+            {
+              "id": "scs_cpu_1e-6",
+              "solver": "scs",
+              "settings": {
+                "eps_abs": 1e-06,
+                "eps_infeas": 1e-06,
+                "eps_rel": 1e-06,
+                "max_iters": 1000000,
+                "time_limit_secs": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3122.8760000000016,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 425706946560,
+            "available_bytes": 425399656448,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_netlib_infeasible_scs_cpu_1e-8_inf4",
+        "created_at_utc": "2026-11-14T13:08:50.018734+00:00",
+        "config": {
+          "name": "infeas_netlib_infeasible_scs_cpu_1e-8_inf4",
+          "datasets": [
+            {
+              "id": "netlib_infeasible",
+              "name": "netlib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 360.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "584d2b22dcbd",
+          "solvers": [
+            {
+              "id": "scs_cpu_1e-8",
+              "solver": "scs",
+              "settings": {
+                "eps_abs": 1e-08,
+                "eps_infeas": 0.0001,
+                "eps_rel": 1e-08,
+                "max_iters": 1000000,
+                "time_limit_secs": 300.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3138.542000000001,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 425706909696,
+            "available_bytes": 425401491456,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_sdplib_infeasible_clarabel_1e-8",
+        "created_at_utc": "2026-11-14T13:07:04.185561+00:00",
+        "config": {
+          "name": "infeas_sdplib_infeasible_clarabel_1e-8",
+          "datasets": [
+            {
+              "id": "sdplib_infeasible",
+              "name": "sdplib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [
+                "infd1",
+                "infd2",
+                "infp1",
+                "infp2"
+              ],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 960.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "88c07e178641",
+          "solvers": [
+            {
+              "id": "clarabel_1e-8",
+              "solver": "clarabel",
+              "settings": {
+                "time_limit": 900.0,
+                "tol_feas": 1e-08,
+                "tol_gap_abs": 1e-08,
+                "tol_gap_rel": 1e-08
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 2450.0,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 353621680128,
+            "available_bytes": 353314390016,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_sdplib_infeasible_cvxopt_1e-6",
+        "created_at_utc": "2026-11-14T13:07:04.410479+00:00",
+        "config": {
+          "name": "infeas_sdplib_infeasible_cvxopt_1e-6",
+          "datasets": [
+            {
+              "id": "sdplib_infeasible",
+              "name": "sdplib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [
+                "infd1",
+                "infd2",
+                "infp1",
+                "infp2"
+              ],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 960.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "f03b7c098d85",
+          "solvers": [
+            {
+              "id": "cvxopt_1e-6",
+              "solver": "cvxopt",
+              "settings": {
+                "abstol": 1e-06,
+                "feastol": 1e-06,
+                "reltol": 1e-06
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3096.635999999999,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 425706930176,
+            "available_bytes": 425399705600,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_sdplib_infeasible_scs_cpu_1e-4_inf",
+        "created_at_utc": "2026-11-14T13:07:04.259623+00:00",
+        "config": {
+          "name": "infeas_sdplib_infeasible_scs_cpu_1e-4_inf",
+          "datasets": [
+            {
+              "id": "sdplib_infeasible",
+              "name": "sdplib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [
+                "infd1",
+                "infd2",
+                "infp1",
+                "infp2"
+              ],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 960.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "a8a541b4dc03",
+          "solvers": [
+            {
+              "id": "scs_cpu_1e-4",
+              "solver": "scs",
+              "settings": {
+                "eps_abs": 0.0001,
+                "eps_infeas": 0.0001,
+                "eps_rel": 0.0001,
+                "max_iters": 1000000,
+                "time_limit_secs": 900.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3116.3879999999995,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 425706909696,
+            "available_bytes": 425399664640,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      },
+      {
+        "run_id": "infeas_sdplib_infeasible_sdpa_1e-6",
+        "created_at_utc": "2026-11-14T13:13:49.549291+00:00",
+        "config": {
+          "name": "infeas_sdplib_infeasible_sdpa_1e-6",
+          "datasets": [
+            {
+              "id": "sdplib_infeasible",
+              "name": "sdplib",
+              "dataset_options": {
+                "subset": "infeasible"
+              },
+              "include": [
+                "infd1",
+                "infd2",
+                "infp1",
+                "infp2"
+              ],
+              "exclude": []
+            }
+          ],
+          "output_dir": "/__modal/volumes/vo-N5cWDYAx6BFr2HMqIJj6L6/results",
+          "include": [],
+          "exclude": [],
+          "parallelism": 1,
+          "resume": true,
+          "max_worker_error_retries": 2,
+          "worker_memory_limit_mb": null,
+          "timeout_seconds": 960.0,
+          "fail_on_unsupported": false,
+          "auto_prepare_data": false,
+          "config_hash": "db1283dc1e58",
+          "solvers": [
+            {
+              "id": "sdpa_1e-6",
+              "solver": "sdpa",
+              "settings": {
+                "eps_abs": 1e-06,
+                "eps_rel": 1e-06,
+                "time_limit": 900.0
+              },
+              "timeout_seconds": null
+            }
+          ]
+        },
+        "system": {
+          "python_executable": "python",
+          "python_version": "3.12.10",
+          "python_implementation": "CPython",
+          "python_compiler": "GCC 12.2.0",
+          "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+          "system": "Linux",
+          "release": "4.19.0-gvisor",
+          "version": "#1 SMP Sun Jan 10 15:06:54 PST 2016",
+          "machine": "x86_64",
+          "processor": "",
+          "cpu": {
+            "logical_count": 20,
+            "physical_count": 20,
+            "max_frequency_mhz": null,
+            "current_frequency_mhz": 3096.635999999999,
+            "model": "unknown"
+          },
+          "memory": {
+            "total_bytes": 425706930176,
+            "available_bytes": 425399418880,
+            "swap_total_bytes": 0
+          },
+          "library_versions": {
+            "numpy": "2.5.3",
+            "scipy": "1.18.1",
+            "pandas": "3.1.1",
+            "pyarrow": "26.0.1",
+            "clarabel": "0.11.1",
+            "cplex": null,
+            "cpo3": null,
+            "cuopt": null,
+            "cuopt-cu12": null,
+            "cvxopt": "1.3.3",
+            "ecos": "2.0.14",
+            "gurobipy": null,
+            "highspy": "1.15.1",
+            "mosek": null,
+            "ortools": "9.15.6755",
+            "osqp": "1.1.3",
+            "piqp": "0.6.4",
+            "proxsuite": "0.7.3",
+            "qtqp": null,
+            "scs": "3.3.2",
+            "sdpa-python": "0.2.3"
+          }
+        }
+      }
+    ],
+    "selections": [
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "clarabel_1e-6"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "clarabel_1e-8"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "cuopt_1e-4"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "highs_1e-6"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "osqp_1e-4"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "osqp_1e-6"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "osqp_1e-8"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "pdlp_1e-5"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "pdlp_cert4_1e-5"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "piqp_1e-6"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "scs_cudss_1e-4"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "scs_cudss_1e-6"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "scs_cudss_1e-8"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "sdplib_infeasible",
+            "name": "sdplib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [
+              "infd1",
+              "infd2",
+              "infp1",
+              "infp2"
+            ],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "scs_cudss_1e-4"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "scs_cpu_1e-4"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "scs_cpu_1e-6"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "netlib_infeasible",
+            "name": "netlib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "scs_cpu_1e-8"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "sdplib_infeasible",
+            "name": "sdplib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [
+              "infd1",
+              "infd2",
+              "infp1",
+              "infp2"
+            ],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "clarabel_1e-8"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "sdplib_infeasible",
+            "name": "sdplib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [
+              "infd1",
+              "infd2",
+              "infp1",
+              "infp2"
+            ],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "cvxopt_1e-6"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "sdplib_infeasible",
+            "name": "sdplib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [
+              "infd1",
+              "infd2",
+              "infp1",
+              "infp2"
+            ],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "scs_cpu_1e-4"
+        ]
+      },
+      {
+        "datasets": [
+          {
+            "id": "sdplib_infeasible",
+            "name": "sdplib",
+            "dataset_options": {
+              "subset": "infeasible"
+            },
+            "include": [
+              "infd1",
+              "infd2",
+              "infp1",
+              "infp2"
+            ],
+            "exclude": []
+          }
+        ],
+        "solvers": [
+          "sdpa_1e-6"
+        ]
+      }
+    ],
+    "duplicate_keys": 0,
+    "mixed_forms": []
+  }
+}

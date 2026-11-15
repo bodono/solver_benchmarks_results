@@ -1,0 +1,29 @@
+run:
+  datasets:
+  - id: sdplib
+    include:
+    - equalG51
+    - gpp124-1
+    - hinf15
+    - hinf5
+    - maxG11
+    - mcp250-3
+    - mcp500-1
+    - qap7
+    - theta3
+    - truss2
+    - truss4
+    name: sdplib
+  name: sdp_sdplib_scs_cpu_1e-6_c2_p0
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 960.0
+solvers:
+- id: scs_cpu_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iters: 1000000
+    time_limit_secs: 900.0
+  solver: scs

@@ -1,0 +1,42 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - bab6
+    - cmflsp50-24-8-8
+    - cryptanalysiskb128n5obj14
+    - gen-ip002
+    - mcsched
+    - n5-3
+    - neos-1445765
+    - neos-3004026-krka
+    - neos-3402294-bobin
+    - neos-5075914-elvire
+    - neos-5104907-jarama
+    - nexp-150-20-8-5
+    - nu25-pr12
+    - pk1
+    - proteindesign122trx11p8
+    - roll3000
+    - sing326
+    - sp98ar
+    - supportcase12
+    - supportcase22
+    - tr12-30
+    - trento1
+    - uct-subprob
+    - unitcal_7
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-6_p9
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

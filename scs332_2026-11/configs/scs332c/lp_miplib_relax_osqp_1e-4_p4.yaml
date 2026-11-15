@@ -1,0 +1,51 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - 30n20b8
+    - bab6
+    - cbs-cta
+    - dano3_5
+    - drayage-25-23
+    - gen-ip054
+    - icir97_tension
+    - lectsched-5-obj
+    - mas76
+    - mc11
+    - mzzv42z
+    - n9-3
+    - neos-3216931-puriri
+    - neos-4413714-turia
+    - neos-4647030-tutaki
+    - neos-5195221-niemur
+    - neos-848589
+    - neos-911970
+    - neos8
+    - peg-solitaire-a3
+    - pg
+    - physiciansched3-3
+    - rail507
+    - reblock115
+    - rmatr100-p10
+    - rocII-5-11
+    - roi5alpha10n8
+    - supportcase26
+    - supportcase6
+    - supportcase7
+    - swath3
+    - tr12-30
+    - uccase12
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-4_p4
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

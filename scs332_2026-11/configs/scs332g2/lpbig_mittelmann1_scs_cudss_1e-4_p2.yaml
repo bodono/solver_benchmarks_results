@@ -1,0 +1,25 @@
+run:
+  datasets:
+  - id: mittelmann1
+    include:
+    - datt256_lp
+    - neos-5052403-cygnet
+    - s100
+    - supportcase10
+    - thk_63
+    - tpl-tub-ws1617
+    name: mittelmann
+  name: lpbig_mittelmann1_scs_cudss_1e-4_p2
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 1860.0
+solvers:
+- id: scs_cudss_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    linear_solver: cudss
+    max_iters: 1000000
+    time_limit_secs: 1800.0
+  solver: scs

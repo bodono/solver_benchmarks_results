@@ -1,0 +1,64 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - atlanta-ip
+    - bab6
+    - binkar10_1
+    - blp-ic98
+    - bnatt500
+    - cmflsp50-24-8-8
+    - co-100
+    - cryptanalysiskb128n5obj16
+    - eil33-2
+    - exp-1-500-5-5
+    - gen-ip002
+    - h80x6320d
+    - hypothyroid-k1
+    - lotsize
+    - mas76
+    - mik-250-20-75-4
+    - mzzv11
+    - n3div36
+    - n9-3
+    - neos-1122047
+    - neos-1171737
+    - neos-2657525-crna
+    - neos-3754480-nidda
+    - neos-631710
+    - neos-662469
+    - neos-911970
+    - neos-957323
+    - neos5
+    - ns1830653
+    - ns1952667
+    - opm2-z10-s4
+    - p200x1188c
+    - piperout-08
+    - rail507
+    - rmatr200-p5
+    - rococoB10-011000
+    - s250r10
+    - seymour
+    - snp-02-004-104
+    - sorrell3
+    - supportcase12
+    - tbfp-network
+    - toll-like
+    - traininstance2
+    - trento1
+    - unitcal_7
+    - var-smallemery-m6j6
+    name: miplib
+  name: lp_miplib_relax_pdlp_1e-4_p0
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: pdlp_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    solver_time_limit_sec: 300.0
+  solver: pdlp

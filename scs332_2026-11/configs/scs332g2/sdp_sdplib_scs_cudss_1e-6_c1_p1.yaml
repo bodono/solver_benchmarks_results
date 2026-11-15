@@ -1,0 +1,22 @@
+run:
+  datasets:
+  - id: sdplib
+    include:
+    - gpp250-4
+    - maxG11
+    - qap9
+    name: sdplib
+  name: sdp_sdplib_scs_cudss_1e-6_c1_p1
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 960.0
+solvers:
+- id: scs_cudss_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    linear_solver: cudss
+    max_iters: 1000000
+    time_limit_secs: 900.0
+  solver: scs

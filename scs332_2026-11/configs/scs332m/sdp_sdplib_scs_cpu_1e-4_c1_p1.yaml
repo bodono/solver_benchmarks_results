@@ -1,0 +1,26 @@
+run:
+  datasets:
+  - id: sdplib
+    include:
+    - control10
+    - control3
+    - gpp250-2
+    - gpp500-3
+    - hinf13
+    - mcp124-2
+    - qpG11
+    - theta2
+    name: sdplib
+  name: sdp_sdplib_scs_cpu_1e-4_c1_p1
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 960.0
+solvers:
+- id: scs_cpu_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    max_iters: 1000000
+    time_limit_secs: 900.0
+  solver: scs

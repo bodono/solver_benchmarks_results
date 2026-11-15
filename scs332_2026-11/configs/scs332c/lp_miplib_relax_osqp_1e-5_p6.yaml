@@ -1,0 +1,47 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - cbs-cta
+    - comp07-2idx
+    - cryptanalysiskb128n5obj14
+    - csched008
+    - fhnw-binpack4-48
+    - germanrr
+    - ic97_potential
+    - lectsched-5-obj
+    - map16715-04
+    - mzzv11
+    - n3div36
+    - neos-4413714-turia
+    - neos-4532248-waihi
+    - neos-5052403-cygnet
+    - neos-5093327-huahum
+    - neos-5195221-niemur
+    - neos-662469
+    - neos-933966
+    - neos-950242
+    - peg-solitaire-a3
+    - radiationm18-12-05
+    - rocI-4-11
+    - sing44
+    - supportcase6
+    - tr12-30
+    - traininstance6
+    - triptim1
+    - uccase9
+    - var-smallemery-m6j6
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-5_p6
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-5
+  settings:
+    eps_abs: 1.0e-05
+    eps_rel: 1.0e-05
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

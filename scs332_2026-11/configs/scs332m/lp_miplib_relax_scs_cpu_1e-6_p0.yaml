@@ -1,0 +1,76 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - 30n20b8
+    - co-100
+    - cod105
+    - cost266-UUE
+    - dano3_3
+    - decomp2
+    - eil33-2
+    - ex9
+    - exp-1-500-5-5
+    - fastxgemm-n2r6s0t2
+    - fhnw-binpack4-4
+    - fiball
+    - gen-ip002
+    - germanrr
+    - gmu-35-40
+    - irish-electricity
+    - mas74
+    - mas76
+    - mcsched
+    - momentum1
+    - mushroom-best
+    - mzzv11
+    - mzzv42z
+    - neos-1456979
+    - neos-3024952-loue
+    - neos-3046615-murg
+    - neos-3627168-kasai
+    - neos-3754480-nidda
+    - neos-3988577-wolgan
+    - neos-4647030-tutaki
+    - neos-4738912-atrato
+    - neos-5052403-cygnet
+    - neos-5075914-elvire
+    - neos-5093327-huahum
+    - neos-5188808-nattai
+    - neos-5195221-niemur
+    - neos-827175
+    - neos-957323
+    - net12
+    - netdiversion
+    - ns1644855
+    - nursesched-medium-hint03
+    - nursesched-sprint02
+    - p200x1188c
+    - pg5_34
+    - proteindesign121hz512p9
+    - radiationm18-12-05
+    - rmatr100-p10
+    - rococoC11-011100
+    - satellites2-40
+    - savsched1
+    - seymour
+    - snp-02-004-104
+    - sorrell3
+    - sp98ar
+    - supportcase26
+    - supportcase33
+    - toll-like
+    name: miplib
+  name: lp_miplib_relax_scs_cpu_1e-6_p0
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: scs_cpu_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iters: 1000000
+    time_limit_secs: 300.0
+  solver: scs

@@ -1,0 +1,56 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - academictimetablesmall
+    - bab6
+    - beasleyC3
+    - binkar10_1
+    - blp-ic98
+    - bnatt500
+    - brazil3
+    - cbs-cta
+    - chromaticindex1024-7
+    - comp21-2idx
+    - csched008
+    - dano3_5
+    - drayage-100-23
+    - gen-ip054
+    - ic97_potential
+    - irish-electricity
+    - k1mushroom
+    - lectsched-5-obj
+    - leo2
+    - lotsize
+    - mcsched
+    - mzzv42z
+    - neos-3024952-loue
+    - neos-3656078-kumeu
+    - neos-4738912-atrato
+    - neos-4763324-toguru
+    - neos-662469
+    - neos-848589
+    - neos-911970
+    - neos17
+    - net12
+    - netdiversion
+    - peg-solitaire-a3
+    - qap10
+    - rd-rplusc-21
+    - rocII-5-11
+    - roi2alpha3n4
+    - s250r10
+    - sp150x300d
+    name: miplib
+  name: lp_miplib_relax_pdlp_1e-5_p2
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: pdlp_1e-5
+  settings:
+    eps_abs: 1.0e-05
+    eps_rel: 1.0e-05
+    solver_time_limit_sec: 300.0
+  solver: pdlp

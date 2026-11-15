@@ -1,0 +1,57 @@
+run:
+  datasets:
+  - id: maros_meszaros
+    include:
+    - AUG2DC
+    - AUG2DCQP
+    - AUG2DQP
+    - AUG3DCQP
+    - CONT-050
+    - CONT-101
+    - CVXQP1_L
+    - CVXQP3_M
+    - DUAL3
+    - DUAL4
+    - DUALC1
+    - GOULDQP3
+    - HS21
+    - HS53
+    - HS76
+    - HUES-MOD
+    - KSIP
+    - LASER
+    - LISWET1
+    - LISWET2
+    - LISWET6
+    - POWELL20
+    - PRIMAL2
+    - PRIMAL3
+    - PRIMALC1
+    - QBANDM
+    - QBEACONF
+    - QPCBLEND
+    - QPCSTAIR
+    - QSCAGR25
+    - QSCAGR7
+    - QSCFXM1
+    - QSCFXM2
+    - QSCSD6
+    - QSCTAP3
+    - QSHARE1B
+    - QSHELL
+    - QSHIP08S
+    - STADAT3
+    name: maros_meszaros
+  name: qp_maros_meszaros_proxqp_1e-6_p3
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: proxqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: proxqp

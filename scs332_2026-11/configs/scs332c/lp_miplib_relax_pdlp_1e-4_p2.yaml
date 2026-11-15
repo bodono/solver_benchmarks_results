@@ -1,0 +1,64 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - app1-2
+    - bppc4-08
+    - cbs-cta
+    - chromaticindex1024-7
+    - csched008
+    - dano3_5
+    - drayage-25-23
+    - enlight_hard
+    - ex9
+    - fast0507
+    - graphdraw-domain
+    - highschool1-aigio
+    - ic97_potential
+    - irish-electricity
+    - istanbul-no-cutoff
+    - map10
+    - mc11
+    - mcsched
+    - milo-v12-6-r2-40-1
+    - momentum1
+    - mushroom-best
+    - neos-1456979
+    - neos-2746589-doon
+    - neos-2978193-inde
+    - neos-3004026-krka
+    - neos-3083819-nubu
+    - neos-3555904-turama
+    - neos-3754224-navua
+    - neos-4338804-snowy
+    - neos-4387871-tavua
+    - neos-4954672-berkel
+    - neos-5093327-huahum
+    - neos-827175
+    - neos-860300
+    - neos8
+    - ns1760995
+    - pg
+    - qap10
+    - rmatr100-p10
+    - rocI-4-11
+    - rocII-5-11
+    - roi5alpha10n8
+    - satellites2-40
+    - sing44
+    - sp150x300d
+    - supportcase22
+    - thor50dday
+    name: miplib
+  name: lp_miplib_relax_pdlp_1e-4_p2
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: pdlp_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    solver_time_limit_sec: 300.0
+  solver: pdlp

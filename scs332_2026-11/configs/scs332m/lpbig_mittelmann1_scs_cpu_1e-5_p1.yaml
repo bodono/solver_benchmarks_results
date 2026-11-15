@@ -1,0 +1,21 @@
+run:
+  datasets:
+  - id: mittelmann1
+    include:
+    - datt256_lp
+    - dlr2
+    - s100
+    name: mittelmann
+  name: lpbig_mittelmann1_scs_cpu_1e-5_p1
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 1860.0
+solvers:
+- id: scs_cpu_1e-5
+  settings:
+    eps_abs: 1.0e-05
+    eps_rel: 1.0e-05
+    max_iters: 1000000
+    time_limit_secs: 1800.0
+  solver: scs

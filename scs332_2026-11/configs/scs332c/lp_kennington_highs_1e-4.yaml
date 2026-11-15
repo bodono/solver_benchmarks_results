@@ -1,0 +1,33 @@
+run:
+  name: lp_kennington_highs_1e-4
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+  datasets:
+  - name: kennington
+    id: kennington
+    include:
+    - cre-a
+    - cre-b
+    - cre-c
+    - cre-d
+    - ken-07
+    - ken-11
+    - ken-13
+    - ken-18
+    - osa-07
+    - osa-14
+    - osa-30
+    - osa-60
+    - pds-02
+    - pds-06
+    - pds-10
+    - pds-20
+solvers:
+- id: highs_1e-4
+  solver: highs
+  settings:
+    primal_feasibility_tolerance: 0.0001
+    dual_feasibility_tolerance: 0.0001
+    time_limit: 300.0

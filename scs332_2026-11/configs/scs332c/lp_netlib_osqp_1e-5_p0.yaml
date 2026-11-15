@@ -1,0 +1,67 @@
+run:
+  datasets:
+  - dataset_options:
+      subset: feasible
+    id: netlib
+    include:
+    - 80bau3b
+    - adlittle
+    - afiro
+    - agg3
+    - beaconfd
+    - blend
+    - bnl2
+    - boeing1
+    - boeing2
+    - capri
+    - cycle
+    - czprob
+    - d6cube
+    - degen2
+    - dfl001
+    - e226
+    - fffff800
+    - fit1p
+    - fit2p
+    - ganges
+    - greenbeb
+    - grow15
+    - grow22
+    - israel
+    - maros-r7
+    - perold
+    - pilot4
+    - pilot87
+    - recipe
+    - sc205
+    - scfxm1
+    - scsd6
+    - sctap1
+    - sctap2
+    - sctap3
+    - seba
+    - shell
+    - ship08l
+    - ship12l
+    - sierra
+    - stair
+    - standata
+    - standmps
+    - stocfor1
+    - tuff
+    - vtp.base
+    - wood1p
+    name: netlib
+  name: lp_netlib_osqp_1e-5_p0
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-5
+  settings:
+    eps_abs: 1.0e-05
+    eps_rel: 1.0e-05
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

@@ -1,0 +1,77 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - 50v-10
+    - air05
+    - b1c1s1
+    - bnatt400
+    - bnatt500
+    - brazil3
+    - chromaticindex512-7
+    - comp07-2idx
+    - cryptanalysiskb128n5obj14
+    - cryptanalysiskb128n5obj16
+    - csched007
+    - csched008
+    - drayage-100-23
+    - enlight_hard
+    - gfd-schedulen180f7d50m30k18
+    - graph20-20-1rand
+    - graphdraw-domain
+    - ic97_potential
+    - istanbul-no-cutoff
+    - leo2
+    - lotsize
+    - map16715-04
+    - milo-v12-6-r2-40-1
+    - n9-3
+    - neos-1171737
+    - neos-1445765
+    - neos-2978193-inde
+    - neos-3216931-puriri
+    - neos-3754224-navua
+    - neos-4532248-waihi
+    - neos-631710
+    - neos-787933
+    - neos-873061
+    - neos5
+    - ns1952667
+    - nu25-pr12
+    - nw04
+    - opm2-z10-s4
+    - pk1
+    - radiationm40-10-02
+    - rail01
+    - rail02
+    - rail507
+    - rmatr200-p5
+    - rocII-5-11
+    - roi2alpha3n4
+    - s250r10
+    - satellites2-60-fs
+    - sct2
+    - sing326
+    - sp97ar
+    - splice1k1
+    - supportcase10
+    - supportcase18
+    - supportcase22
+    - supportcase6
+    - tr12-30
+    - traininstance2
+    - uccase9
+    name: miplib
+  name: lp_miplib_relax_scs_cpu_1e-6_p3
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: scs_cpu_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iters: 1000000
+    time_limit_secs: 300.0
+  solver: scs

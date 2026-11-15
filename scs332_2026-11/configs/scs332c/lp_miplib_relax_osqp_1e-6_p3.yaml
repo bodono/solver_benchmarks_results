@@ -1,0 +1,41 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - 30n20b8
+    - app1-2
+    - binkar10_1
+    - brazil3
+    - comp21-2idx
+    - eil33-2
+    - fastxgemm-n2r6s0t2
+    - istanbul-no-cutoff
+    - map10
+    - mzzv42z
+    - neos-2657525-crna
+    - neos-3555904-turama
+    - neos-3754224-navua
+    - neos-3988577-wolgan
+    - neos-4387871-tavua
+    - neos-5107597-kakapo
+    - ns1644855
+    - physiciansched6-2
+    - rocI-4-11
+    - rococoC11-011100
+    - satellites2-60-fs
+    - swath1
+    - traininstance6
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-6_p3
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

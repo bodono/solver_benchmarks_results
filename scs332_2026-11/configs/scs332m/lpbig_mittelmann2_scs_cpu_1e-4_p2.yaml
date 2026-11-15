@@ -1,0 +1,26 @@
+run:
+  datasets:
+  - id: mittelmann2
+    include:
+    - L2CTA3D
+    - Linf_520c
+    - brazil3
+    - s250r10
+    - savsched1
+    - set-cover-model
+    - square41
+    - woodlands09
+    name: mittelmann
+  name: lpbig_mittelmann2_scs_cpu_1e-4_p2
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 1860.0
+solvers:
+- id: scs_cpu_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    max_iters: 1000000
+    time_limit_secs: 1800.0
+  solver: scs

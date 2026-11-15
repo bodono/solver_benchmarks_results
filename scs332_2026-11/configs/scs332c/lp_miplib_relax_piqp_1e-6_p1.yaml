@@ -1,0 +1,77 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - 30n20b8
+    - assign1-5-8
+    - cbs-cta
+    - chromaticindex512-7
+    - co-100
+    - comp21-2idx
+    - cost266-UUE
+    - cryptanalysiskb128n5obj14
+    - csched007
+    - dano3_3
+    - dws008-01
+    - eil33-2
+    - enlight_hard
+    - fhnw-binpack4-48
+    - glass4
+    - icir97_tension
+    - irish-electricity
+    - markshare2
+    - milo-v12-6-r2-40-1
+    - n3div36
+    - neos-2978193-inde
+    - neos-3046615-murg
+    - neos-3083819-nubu
+    - neos-3555904-turama
+    - neos-4300652-rahue
+    - neos-4413714-turia
+    - neos-4763324-toguru
+    - neos-5049753-cuanza
+    - neos-5107597-kakapo
+    - neos-5188808-nattai
+    - neos-950242
+    - neos-960392
+    - ns1644855
+    - ns1760995
+    - ns1830653
+    - p200x1188c
+    - pg
+    - proteindesign122trx11p8
+    - radiationm18-12-05
+    - radiationm40-10-02
+    - reblock115
+    - rmatr100-p10
+    - roi2alpha3n4
+    - roi5alpha10n8
+    - roll3000
+    - satellites2-40
+    - sct2
+    - sing44
+    - snp-02-004-104
+    - sorrell3
+    - sp150x300d
+    - splice1k1
+    - supportcase12
+    - swath3
+    - toll-like
+    - tr12-30
+    - trento1
+    - uccase9
+    - wachplan
+    name: miplib
+  name: lp_miplib_relax_piqp_1e-6_p1
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: piqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: piqp

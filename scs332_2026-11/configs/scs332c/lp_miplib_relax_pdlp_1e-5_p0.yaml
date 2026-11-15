@@ -1,0 +1,56 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - 30n20b8
+    - app1-2
+    - bnatt400
+    - bppc4-08
+    - cost266-UUE
+    - cvs16r128-89
+    - dws008-01
+    - germanrr
+    - glass-sc
+    - graphdraw-domain
+    - markshare2
+    - mas76
+    - momentum1
+    - n2seq36q
+    - n5-3
+    - neos-1171737
+    - neos-2746589-doon
+    - neos-3754224-navua
+    - neos-4338804-snowy
+    - neos-4722843-widden
+    - neos-5075914-elvire
+    - neos-5093327-huahum
+    - neos-957323
+    - neos8
+    - ns1208400
+    - ns1952667
+    - nursesched-medium-hint03
+    - nw04
+    - pg
+    - rail01
+    - rococoB10-011000
+    - sct2
+    - seymour1
+    - snp-02-004-104
+    - supportcase12
+    - supportcase22
+    - supportcase26
+    - tbfp-network
+    - trento1
+    name: miplib
+  name: lp_miplib_relax_pdlp_1e-5_p0
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: pdlp_1e-5
+  settings:
+    eps_abs: 1.0e-05
+    eps_rel: 1.0e-05
+    solver_time_limit_sec: 300.0
+  solver: pdlp

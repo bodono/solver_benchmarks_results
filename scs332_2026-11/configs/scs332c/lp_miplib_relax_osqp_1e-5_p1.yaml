@@ -1,0 +1,47 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - air05
+    - atlanta-ip
+    - blp-ar98
+    - comp21-2idx
+    - dws008-01
+    - gmu-35-50
+    - highschool1-aigio
+    - istanbul-no-cutoff
+    - leo1
+    - mc11
+    - mcsched
+    - momentum1
+    - neos-3004026-krka
+    - neos-3402294-bobin
+    - neos-3754224-navua
+    - neos-873061
+    - neos859080
+    - ns1208400
+    - ns1830653
+    - proteindesign121hz512p9
+    - ran14x18-disj-8
+    - rocII-5-11
+    - seymour
+    - snp-02-004-104
+    - sp98ar
+    - supportcase18
+    - supportcase42
+    - tbfp-network
+    - trento1
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-5_p1
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-5
+  settings:
+    eps_abs: 1.0e-05
+    eps_rel: 1.0e-05
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

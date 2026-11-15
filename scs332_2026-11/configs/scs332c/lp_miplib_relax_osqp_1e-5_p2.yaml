@@ -1,0 +1,48 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - assign1-5-8
+    - buildingenergy
+    - cmflsp50-24-8-8
+    - co-100
+    - cod105
+    - dano3_3
+    - drayage-25-23
+    - fastxgemm-n2r6s0t2
+    - fhnw-binpack4-4
+    - gen-ip054
+    - gfd-schedulen180f7d50m30k18
+    - h80x6320d
+    - hypothyroid-k1
+    - markshare_4_0
+    - mik-250-20-75-4
+    - neos-1354092
+    - neos-2978193-inde
+    - neos-3627168-kasai
+    - neos-4954672-berkel
+    - neos-5188808-nattai
+    - neos-860300
+    - netdiversion
+    - ns1116954
+    - nu25-pr12
+    - rd-rplusc-21
+    - rmatr200-p5
+    - s100
+    - sp97ar
+    - traininstance2
+    - unitcal_7
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-5_p2
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-5
+  settings:
+    eps_abs: 1.0e-05
+    eps_rel: 1.0e-05
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

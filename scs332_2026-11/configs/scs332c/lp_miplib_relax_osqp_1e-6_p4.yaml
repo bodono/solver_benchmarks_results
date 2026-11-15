@@ -1,0 +1,42 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - beasleyC3
+    - dano3_3
+    - gmu-35-50
+    - graph20-20-1rand
+    - ic97_potential
+    - lectsched-5-obj
+    - leo1
+    - markshare_4_0
+    - mas74
+    - mushroom-best
+    - neos-3216931-puriri
+    - neos-4532248-waihi
+    - neos-5195221-niemur
+    - netdiversion
+    - physiciansched3-3
+    - radiationm18-12-05
+    - rail01
+    - rocII-5-11
+    - sct2
+    - snp-02-004-104
+    - sorrell3
+    - sp97ar
+    - supportcase40
+    - uccase9
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-6_p4
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

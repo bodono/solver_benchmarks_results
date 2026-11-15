@@ -1,0 +1,41 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - air05
+    - blp-ar98
+    - bnatt400
+    - co-100
+    - csched007
+    - drayage-25-23
+    - gen-ip054
+    - h80x6320d
+    - map16715-04
+    - neos-1171448
+    - neos-1171737
+    - neos-3046615-murg
+    - neos-5052403-cygnet
+    - neos-827175
+    - neos-933966
+    - neos-950242
+    - ns1116954
+    - pg5_34
+    - proteindesign121hz512p9
+    - reblock115
+    - supportcase26
+    - supportcase33
+    - tbfp-network
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-6_p6
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

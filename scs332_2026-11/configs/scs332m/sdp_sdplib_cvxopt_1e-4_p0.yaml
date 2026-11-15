@@ -1,0 +1,61 @@
+run:
+  datasets:
+  - id: sdplib
+    include:
+    - arch2
+    - arch4
+    - arch8
+    - control1
+    - control10
+    - control11
+    - control2
+    - control3
+    - control6
+    - control7
+    - equalG51
+    - gpp100
+    - gpp124-1
+    - gpp124-3
+    - gpp124-4
+    - gpp250-4
+    - gpp500-2
+    - hinf10
+    - hinf11
+    - hinf13
+    - hinf15
+    - hinf3
+    - hinf4
+    - hinf7
+    - hinf8
+    - maxG11
+    - maxG55
+    - mcp124-2
+    - mcp124-4
+    - mcp250-1
+    - mcp250-4
+    - mcp500-1
+    - mcp500-2
+    - mcp500-3
+    - qap8
+    - qap9
+    - theta3
+    - theta4
+    - theta6
+    - thetaG11
+    - thetaG51
+    - truss1
+    - truss3
+    - truss7
+    name: sdplib
+  name: sdp_sdplib_cvxopt_1e-4_p0
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 960.0
+solvers:
+- id: cvxopt_1e-4
+  settings:
+    abstol: 0.0001
+    feastol: 0.0001
+    reltol: 0.0001
+  solver: cvxopt

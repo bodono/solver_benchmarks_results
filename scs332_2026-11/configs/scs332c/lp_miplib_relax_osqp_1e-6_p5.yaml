@@ -1,0 +1,41 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - 50v-10
+    - cod105
+    - drayage-100-23
+    - fhnw-binpack4-48
+    - glass-sc
+    - k1mushroom
+    - mik-250-20-75-4
+    - momentum1
+    - n3div36
+    - neos-2978193-inde
+    - neos-3754480-nidda
+    - neos-4647030-tutaki
+    - neos-5049753-cuanza
+    - neos-787933
+    - neos-911970
+    - neos8
+    - ns1760995
+    - pg
+    - ran14x18-disj-8
+    - rococoB10-011000
+    - satellites2-40
+    - supportcase10
+    - swath3
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-6_p5
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

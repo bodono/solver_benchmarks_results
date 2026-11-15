@@ -1,0 +1,51 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - assign1-5-8
+    - blp-ic98
+    - brazil3
+    - cost266-UUE
+    - cryptanalysiskb128n5obj16
+    - csched007
+    - glass4
+    - highschool1-aigio
+    - leo2
+    - neos-1445765
+    - neos-1582420
+    - neos-2978193-inde
+    - neos-3083819-nubu
+    - neos-3381206-awhea
+    - neos-4387871-tavua
+    - neos-5052403-cygnet
+    - neos-662469
+    - neos-860300
+    - neos-873061
+    - neos-950242
+    - neos17
+    - net12
+    - netdiversion
+    - nexp-150-20-8-5
+    - p200x1188c
+    - proteindesign122trx11p8
+    - radiationm18-12-05
+    - radiationm40-10-02
+    - ran14x18-disj-8
+    - s250r10
+    - sing44
+    - trento1
+    - var-smallemery-m6j6
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-4_p1
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

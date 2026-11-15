@@ -1,0 +1,30 @@
+[
+ {
+  "name": "lpbig_mittelmann2_clarabel_1e-6_p1_fill",
+  "family": "lpbig",
+  "dataset": "mittelmann2",
+  "solver_id": "clarabel_1e-6",
+  "tol": 1e-06,
+  "gpu": false,
+  "runner": "cpu_big",
+  "config": "campaign/scs332c_fill/lpbig_mittelmann2_clarabel_1e-6_p1_fill.yaml",
+  "problems": 1,
+  "campaign": "scs332c",
+  "est_hours": 0.55,
+  "note": "s82 alone: in lpbig_mittelmann2_clarabel_1e-6_p1 it queued behind an L1_sixm problem whose Clarabel container exceeded 64 GB six times; Modal dropped the input"
+ },
+ {
+  "name": "lpbig_mittelmann2_clarabel_1e-4_p2_fill",
+  "family": "lpbig",
+  "dataset": "mittelmann2",
+  "solver_id": "clarabel_1e-4",
+  "tol": 0.0001,
+  "gpu": false,
+  "runner": "cpu_big",
+  "config": "campaign/scs332c_fill/lpbig_mittelmann2_clarabel_1e-4_p2_fill.yaml",
+  "problems": 1,
+  "campaign": "scs332c",
+  "est_hours": 0.55,
+  "note": "set-cover-model alone: in lpbig_mittelmann2_clarabel_1e-4_p2 it queued behind an L1_sixm problem whose Clarabel container exceeded 64 GB six times; Modal dropped the input"
+ }
+]

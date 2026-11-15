@@ -1,0 +1,34 @@
+run:
+  name: lp_kennington_clarabel_1e-6
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+  datasets:
+  - name: kennington
+    id: kennington
+    include:
+    - cre-a
+    - cre-b
+    - cre-c
+    - cre-d
+    - ken-07
+    - ken-11
+    - ken-13
+    - ken-18
+    - osa-07
+    - osa-14
+    - osa-30
+    - osa-60
+    - pds-02
+    - pds-06
+    - pds-10
+    - pds-20
+solvers:
+- id: clarabel_1e-6
+  solver: clarabel
+  settings:
+    tol_feas: 1.0e-06
+    tol_gap_abs: 1.0e-06
+    tol_gap_rel: 1.0e-06
+    time_limit: 300.0

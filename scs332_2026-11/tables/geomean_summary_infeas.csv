@@ -1,0 +1,11 @@
+family,tol,subset,solver_id,run_time_seconds,mode,shift,max_value,success_count,failure_count,max_value_by_dataset,label
+infeas,1e-8,all,clarabel_1e-8,3.869607914383618,penalized,10.0,900.0,27,2,,Clarabel
+infeas,1e-8,all,scs_cudss_1e-8,6.141857200414076,penalized,10.0,900.0,27,2,,"SCS (GPU, cuDSS)"
+infeas,1e-8,all,scs_cpu_1e-8,8.98895353862742,penalized,10.0,900.0,25,4,,"SCS (CPU, MKL Pardiso)"
+infeas,1e-8,all,pdlp_1e-8,41.32850471632552,penalized,10.0,900.0,22,7,,PDLP (OR-Tools)
+infeas,1e-8,all,osqp_1e-8,43.264329725681904,penalized,10.0,900.0,19,10,,OSQP
+infeas,1e-8,largest,scs_cpu_1e-8,0.3196259232844554,penalized,10.0,900.0,8,0,,"SCS (CPU, MKL Pardiso)"
+infeas,1e-8,largest,scs_cudss_1e-8,0.7041772468755436,penalized,10.0,900.0,8,0,,"SCS (GPU, cuDSS)"
+infeas,1e-8,largest,clarabel_1e-8,8.596914857145347,penalized,10.0,900.0,7,1,,Clarabel
+infeas,1e-8,largest,osqp_1e-8,123.38081386981509,penalized,10.0,900.0,4,4,,OSQP
+infeas,1e-8,largest,pdlp_1e-8,134.81729092506913,penalized,10.0,900.0,5,3,,PDLP (OR-Tools)

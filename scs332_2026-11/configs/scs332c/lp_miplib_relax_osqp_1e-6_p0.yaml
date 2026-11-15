@@ -1,0 +1,41 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - atlanta-ip
+    - bab2
+    - blp-ic98
+    - bnatt500
+    - cvs16r128-89
+    - ex10
+    - fast0507
+    - fhnw-binpack4-4
+    - fiball
+    - germanrr
+    - gfd-schedulen180f7d50m30k18
+    - irish-electricity
+    - mc11
+    - neos-960392
+    - neos5
+    - net12
+    - nursesched-medium-hint03
+    - opm2-z10-s4
+    - rmatr100-p10
+    - rmatr200-p5
+    - savsched1
+    - sp150x300d
+    - supportcase18
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-6_p0
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

@@ -1,0 +1,178 @@
+{
+ "rule": "controlled campaigns scs332m (no _limit), scs332g2, scs332c (+ fill); Clarabel out-of-memory problems as worker_error rows; no September rows",
+ "fetch": {
+  "files": 1381,
+  "absent": 2,
+  "failed": []
+ },
+ "oom_failures": [
+  {
+   "problem": "L1_sixm250obs",
+   "solver_id": "clarabel_1e-6",
+   "lost_shard": "lpbig_mittelmann2_clarabel_1e-6_p1",
+   "containers": 6,
+   "row_in": "lpbig_mittelmann2_clarabel_1e-6_p1_fill"
+  },
+  {
+   "problem": "L1_sixm1000obs",
+   "solver_id": "clarabel_1e-4",
+   "lost_shard": "lpbig_mittelmann2_clarabel_1e-4_p2",
+   "containers": 6,
+   "row_in": "lpbig_mittelmann2_clarabel_1e-4_p2_fill"
+  }
+ ],
+ "check": {
+  "shards": 459,
+  "incomplete": [],
+  "n_incomplete": 0,
+  "fatal": [],
+  "n_fatal": 0,
+  "bad_lines": [],
+  "container_hosts": {
+   "cpu|None|25/1": 204,
+   "cpu_big|None|25/1": 217,
+   "gpu|NVIDIA A100-SXM4-80GB|25/1": 87,
+   "cuopt|NVIDIA A100-SXM4-80GB|25/1": 28,
+   "pdlp|None|25/1": 67
+  },
+  "statuses": {
+   "optimal": 10168,
+   "optimal_inaccurate": 478,
+   "primal_infeasible_inaccurate": 28,
+   "primal_infeasible": 465,
+   "dual_infeasible": 102,
+   "time_limit": 886,
+   "dual_infeasible_inaccurate": 1,
+   "solver_error": 242,
+   "max_iter_reached": 219,
+   "primal_or_dual_infeasible": 4,
+   "worker_error": 52,
+   "skipped_unsupported": 4
+  }
+ },
+ "merged": {
+  "qp": {
+   "sources": 55,
+   "rows": 3297,
+   "duplicate_keys": 0,
+   "mixed_forms": [],
+   "solvers": {
+    "clarabel_1e-4": 157,
+    "clarabel_1e-6": 157,
+    "cuopt_1e-4": 157,
+    "cuopt_1e-5": 157,
+    "cuopt_1e-6": 157,
+    "highs_1e-4": 157,
+    "highs_1e-6": 157,
+    "osqp_1e-4": 157,
+    "osqp_1e-5": 157,
+    "osqp_1e-6": 157,
+    "piqp_1e-4": 157,
+    "piqp_1e-6": 157,
+    "proxqp_1e-4": 157,
+    "proxqp_1e-5": 157,
+    "proxqp_1e-6": 157,
+    "scs_cudss_1e-4": 157,
+    "scs_cudss_1e-5": 157,
+    "scs_cudss_1e-6": 157,
+    "scs_cpu_1e-4": 157,
+    "scs_cpu_1e-5": 157,
+    "scs_cpu_1e-6": 157
+   }
+  },
+  "lp": {
+   "sources": 169,
+   "rows": 7434,
+   "duplicate_keys": 0,
+   "mixed_forms": [],
+   "solvers": {
+    "clarabel_1e-4": 354,
+    "clarabel_1e-6": 354,
+    "cuopt_1e-4": 354,
+    "cuopt_1e-5": 354,
+    "cuopt_1e-6": 354,
+    "highs_1e-4": 354,
+    "highs_1e-6": 354,
+    "osqp_1e-4": 354,
+    "osqp_1e-5": 354,
+    "osqp_1e-6": 354,
+    "pdlp_1e-4": 354,
+    "pdlp_1e-5": 354,
+    "pdlp_1e-6": 354,
+    "piqp_1e-4": 354,
+    "piqp_1e-6": 354,
+    "scs_cudss_1e-4": 354,
+    "scs_cudss_1e-5": 354,
+    "scs_cudss_1e-6": 354,
+    "scs_cpu_1e-4": 354,
+    "scs_cpu_1e-5": 354,
+    "scs_cpu_1e-6": 354
+   }
+  },
+  "lpbig": {
+   "sources": 114,
+   "rows": 444,
+   "duplicate_keys": 0,
+   "mixed_forms": [],
+   "solvers": {
+    "clarabel_1e-4": 37,
+    "clarabel_1e-6": 37,
+    "cuopt_1e-4": 37,
+    "cuopt_1e-5": 37,
+    "highs_1e-4": 37,
+    "pdlp_1e-4": 37,
+    "pdlp_1e-5": 37,
+    "piqp_1e-4": 37,
+    "scs_cudss_1e-4": 37,
+    "scs_cudss_1e-5": 37,
+    "scs_cpu_1e-4": 37,
+    "scs_cpu_1e-5": 37
+   }
+  },
+  "sdp": {
+   "sources": 100,
+   "rows": 990,
+   "duplicate_keys": 0,
+   "mixed_forms": [],
+   "solvers": {
+    "scs_cudss_1e-4": 94,
+    "scs_cudss_1e-6": 94,
+    "clarabel_1e-4": 74,
+    "clarabel_1e-6": 74,
+    "clarabel_1e-8": 90,
+    "cvxopt_1e-4": 94,
+    "cvxopt_1e-6": 94,
+    "scs_cpu_1e-4": 94,
+    "scs_cpu_1e-6": 94,
+    "sdpa_1e-4": 94,
+    "sdpa_1e-6": 94
+   }
+  },
+  "infeas": {
+   "sources": 21,
+   "rows": 484,
+   "duplicate_keys": 0,
+   "mixed_forms": [],
+   "solvers": {
+    "clarabel_1e-6": 29,
+    "clarabel_1e-8": 33,
+    "cuopt_1e-4": 29,
+    "highs_1e-6": 29,
+    "osqp_1e-4": 29,
+    "osqp_1e-6": 29,
+    "osqp_1e-8": 29,
+    "pdlp_1e-5": 29,
+    "pdlp_cert4_1e-5": 29,
+    "piqp_1e-6": 29,
+    "scs_cudss_1e-4": 33,
+    "scs_cudss_1e-6": 29,
+    "scs_cudss_1e-8": 29,
+    "scs_cpu_1e-4": 33,
+    "scs_cpu_1e-6": 29,
+    "scs_cpu_1e-8": 29,
+    "cvxopt_1e-6": 4,
+    "sdpa_1e-6": 4
+   }
+  }
+ }
+}

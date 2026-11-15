@@ -1,0 +1,52 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - atlanta-ip
+    - comp07-2idx
+    - cryptanalysiskb128n5obj14
+    - csched008
+    - ex10
+    - fastxgemm-n2r6s0t2
+    - fhnw-binpack4-48
+    - gmu-35-40
+    - hypothyroid-k1
+    - ic97_potential
+    - irp
+    - markshare_4_0
+    - momentum1
+    - n2seq36q
+    - n3div36
+    - neos-3024952-loue
+    - neos-3627168-kasai
+    - neos-4338804-snowy
+    - neos-4738912-atrato
+    - neos-4954672-berkel
+    - neos-957323
+    - ns1760995
+    - ns1952667
+    - proteindesign121hz512p9
+    - rmatr200-p5
+    - rococoB10-011000
+    - rococoC11-011100
+    - savsched1
+    - seymour1
+    - sorrell3
+    - sp97ar
+    - splice1k1
+    - supportcase22
+    - traininstance2
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-4_p0
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

@@ -1,0 +1,41 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - CMS750_4
+    - assign1-5-8
+    - cryptanalysiskb128n5obj16
+    - csched008
+    - eilA101-2
+    - exp-1-500-5-5
+    - hypothyroid-k1
+    - irp
+    - milo-v12-6-r2-40-1
+    - n9-3
+    - neos-1456979
+    - neos-2746589-doon
+    - neos-3381206-awhea
+    - neos-4413714-turia
+    - neos-4738912-atrato
+    - neos-5188808-nattai
+    - ns1208400
+    - rail02
+    - roi2alpha3n4
+    - seymour
+    - splice1k1
+    - supportcase6
+    - supportcase7
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-6_p8
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

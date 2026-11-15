@@ -1,0 +1,76 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - CMS750_4
+    - academictimetablesmall
+    - b1c1s1
+    - bab2
+    - beasleyC3
+    - bnatt400
+    - brazil3
+    - buildingenergy
+    - chromaticindex1024-7
+    - cmflsp50-24-8-8
+    - comp07-2idx
+    - cvs16r128-89
+    - decomp2
+    - drayage-100-23
+    - ex10
+    - gen-ip054
+    - glass-sc
+    - graph20-20-1rand
+    - graphdraw-domain
+    - ic97_potential
+    - k1mushroom
+    - leo2
+    - map10
+    - mas76
+    - mcsched
+    - n2seq36q
+    - n5-3
+    - neos-1354092
+    - neos-2746589-doon
+    - neos-3627168-kasai
+    - neos-3656078-kumeu
+    - neos-3754480-nidda
+    - neos-3988577-wolgan
+    - neos-4387871-tavua
+    - neos-4532248-waihi
+    - neos-5075914-elvire
+    - neos-5093327-huahum
+    - neos-787933
+    - neos-827175
+    - neos-933966
+    - neos17
+    - neos5
+    - neos8
+    - netdiversion
+    - nursesched-medium-hint03
+    - nursesched-sprint02
+    - opm2-z10-s4
+    - peg-solitaire-a3
+    - proteindesign121hz512p9
+    - rococoB10-011000
+    - seymour1
+    - supportcase10
+    - supportcase18
+    - supportcase22
+    - supportcase40
+    - supportcase7
+    - traininstance6
+    - unitcal_7
+    name: miplib
+  name: lp_miplib_relax_piqp_1e-6_p2
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: piqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: piqp

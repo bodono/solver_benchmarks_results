@@ -1,0 +1,19 @@
+run:
+  datasets:
+  - id: mittelmann2
+    include:
+    - L1_sixm1000obs
+    - brazil3
+    name: mittelmann
+  name: lpbig_mittelmann2_highs_1e-4_p2
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 1860.0
+solvers:
+- id: highs_1e-4
+  settings:
+    dual_feasibility_tolerance: 0.0001
+    primal_feasibility_tolerance: 0.0001
+    time_limit: 1800.0
+  solver: highs

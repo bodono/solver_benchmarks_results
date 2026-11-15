@@ -1,0 +1,42 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - b1c1s1
+    - buildingenergy
+    - cbs-cta
+    - cost266-UUE
+    - dws008-01
+    - glass4
+    - gmu-35-40
+    - leo2
+    - mas76
+    - mzzv11
+    - n2seq36q
+    - neos-1582420
+    - neos-4722843-widden
+    - neos-5093327-huahum
+    - neos-631710
+    - neos-957323
+    - neos859080
+    - ns1952667
+    - nursesched-sprint02
+    - radiationm40-10-02
+    - rd-rplusc-21
+    - toll-like
+    - traininstance2
+    - wachplan
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-6_p2
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

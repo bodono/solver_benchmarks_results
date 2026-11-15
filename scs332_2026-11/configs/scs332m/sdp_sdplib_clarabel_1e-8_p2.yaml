@@ -1,0 +1,42 @@
+run:
+  datasets:
+  - id: sdplib
+    include:
+    - arch0
+    - arch2
+    - control3
+    - control9
+    - gpp124-2
+    - gpp124-4
+    - gpp250-3
+    - hinf1
+    - hinf10
+    - hinf14
+    - hinf15
+    - hinf3
+    - hinf7
+    - mcp124-2
+    - mcp124-3
+    - mcp250-4
+    - qap5
+    - qap7
+    - theta2
+    - theta3
+    - theta5
+    - truss1
+    - truss2
+    - truss8
+    name: sdplib
+  name: sdp_sdplib_clarabel_1e-8_p2
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 960.0
+solvers:
+- id: clarabel_1e-8
+  settings:
+    time_limit: 900.0
+    tol_feas: 1.0e-08
+    tol_gap_abs: 1.0e-08
+    tol_gap_rel: 1.0e-08
+  solver: clarabel

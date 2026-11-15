@@ -1,0 +1,42 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - academictimetablesmall
+    - chromaticindex1024-7
+    - comp07-2idx
+    - ex9
+    - lotsize
+    - markshare2
+    - neos-1354092
+    - neos-3083819-nubu
+    - neos-3627168-kasai
+    - neos-3656078-kumeu
+    - neos-4338804-snowy
+    - neos-4763324-toguru
+    - neos-4954672-berkel
+    - neos-848589
+    - neos-873061
+    - neos17
+    - peg-solitaire-a3
+    - qap10
+    - s250r10
+    - seymour1
+    - sing44
+    - thor50dday
+    - triptim1
+    - var-smallemery-m6j6
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-6_p7
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

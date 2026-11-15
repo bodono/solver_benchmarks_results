@@ -1,0 +1,48 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - academictimetablesmall
+    - app1-1
+    - app1-2
+    - b1c1s1
+    - bab2
+    - blp-ic98
+    - eilA101-2
+    - ex9
+    - graphdraw-domain
+    - icir97_tension
+    - irish-electricity
+    - irp
+    - leo2
+    - mas74
+    - n2seq36q
+    - neos-1171737
+    - neos-1445765
+    - neos-3024952-loue
+    - neos-3381206-awhea
+    - neos-3988577-wolgan
+    - neos-4738912-atrato
+    - neos-5049753-cuanza
+    - neos-827175
+    - nexp-150-20-8-5
+    - ns1952667
+    - physiciansched3-3
+    - pk1
+    - reblock115
+    - supportcase7
+    - toll-like
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-5_p4
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-5
+  settings:
+    eps_abs: 1.0e-05
+    eps_rel: 1.0e-05
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

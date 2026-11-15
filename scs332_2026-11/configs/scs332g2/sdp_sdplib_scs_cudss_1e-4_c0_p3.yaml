@@ -1,0 +1,30 @@
+run:
+  datasets:
+  - id: sdplib
+    include:
+    - arch4
+    - control6
+    - hinf1
+    - hinf4
+    - mcp124-4
+    - mcp250-3
+    - mcp500-4
+    - ss30
+    - theta5
+    - theta6
+    - truss4
+    name: sdplib
+  name: sdp_sdplib_scs_cudss_1e-4_c0_p3
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 960.0
+solvers:
+- id: scs_cudss_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    linear_solver: cudss
+    max_iters: 1000000
+    time_limit_secs: 900.0
+  solver: scs

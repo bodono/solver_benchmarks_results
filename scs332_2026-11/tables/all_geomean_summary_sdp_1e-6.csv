@@ -1,0 +1,11 @@
+family,tol,subset,solver_id,run_time_seconds,mode,shift,max_value,success_count,failure_count,max_value_by_dataset,label
+sdp,1e-6,all,sdpa_1e-6,57.55042618355155,penalized,10.0,2700.0,68,26,,SDPA
+sdp,1e-6,all,clarabel_1e-6,69.66729500335234,penalized,10.0,2700.0,69,25,,Clarabel
+sdp,1e-6,all,cvxopt_1e-6,118.89523485349898,penalized,10.0,2700.0,62,32,,CVXOPT
+sdp,1e-6,all,scs_cpu_1e-6,199.64931093208173,penalized,10.0,2700.0,58,36,,"SCS (CPU, MKL Pardiso)"
+sdp,1e-6,all,scs_cudss_1e-6,270.8064697712933,penalized,10.0,2700.0,54,40,,"SCS (GPU, cuDSS)"
+sdp,1e-6,largest,sdpa_1e-6,45.53476415360785,penalized,10.0,2700.0,20,4,,SDPA
+sdp,1e-6,largest,cvxopt_1e-6,139.4302860651918,penalized,10.0,2700.0,17,7,,CVXOPT
+sdp,1e-6,largest,clarabel_1e-6,313.56321664275947,penalized,10.0,2700.0,11,13,,Clarabel
+sdp,1e-6,largest,scs_cpu_1e-6,1326.8352714625769,penalized,10.0,2700.0,10,14,,"SCS (CPU, MKL Pardiso)"
+sdp,1e-6,largest,scs_cudss_1e-6,1981.9169048548065,penalized,10.0,2700.0,6,18,,"SCS (GPU, cuDSS)"

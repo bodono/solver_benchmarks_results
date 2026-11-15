@@ -1,0 +1,27 @@
+run:
+  datasets:
+  - id: sdplib
+    include:
+    - arch0
+    - arch4
+    - equalG51
+    - gpp500-2
+    - hinf12
+    - hinf4
+    - mcp250-4
+    - mcp500-4
+    - qap10
+    name: sdplib
+  name: sdp_sdplib_scs_cpu_1e-4_c2_p0
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 960.0
+solvers:
+- id: scs_cpu_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    max_iters: 1000000
+    time_limit_secs: 900.0
+  solver: scs

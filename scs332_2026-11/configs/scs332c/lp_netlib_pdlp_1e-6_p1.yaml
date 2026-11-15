@@ -1,0 +1,65 @@
+run:
+  datasets:
+  - dataset_options:
+      subset: feasible
+    id: netlib
+    include:
+    - bandm
+    - beaconfd
+    - bnl1
+    - bnl2
+    - boeing1
+    - boeing2
+    - bore3d
+    - brandy
+    - capri
+    - czprob
+    - d6cube
+    - degen2
+    - degen3
+    - dfl001
+    - fffff800
+    - finnis
+    - fit2d
+    - forplan
+    - gfrd-pnc
+    - greenbea
+    - greenbeb
+    - grow15
+    - grow7
+    - kb2
+    - maros
+    - pilot87
+    - pilotnov
+    - recipe
+    - sc50a
+    - scagr25
+    - scagr7
+    - scfxm1
+    - scrs8
+    - scsd1
+    - scsd6
+    - scsd8
+    - sctap3
+    - seba
+    - share1b
+    - ship04l
+    - standata
+    - standgub
+    - tuff
+    - vtp.base
+    - wood1p
+    - woodw
+    name: netlib
+  name: lp_netlib_pdlp_1e-6_p1
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: pdlp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    solver_time_limit_sec: 300.0
+  solver: pdlp

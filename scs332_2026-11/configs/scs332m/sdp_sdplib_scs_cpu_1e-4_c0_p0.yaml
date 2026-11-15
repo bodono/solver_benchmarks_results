@@ -1,0 +1,27 @@
+run:
+  datasets:
+  - id: sdplib
+    include:
+    - control2
+    - control8
+    - gpp100
+    - gpp124-2
+    - hinf9
+    - maxG32
+    - maxG55
+    - mcp100
+    - qap5
+    name: sdplib
+  name: sdp_sdplib_scs_cpu_1e-4_c0_p0
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 960.0
+solvers:
+- id: scs_cpu_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    max_iters: 1000000
+    time_limit_secs: 900.0
+  solver: scs

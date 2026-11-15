@@ -1,0 +1,52 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - app1-1
+    - binkar10_1
+    - bnatt400
+    - bppc4-08
+    - co-100
+    - cod105
+    - drayage-100-23
+    - dws008-01
+    - enlight_hard
+    - ex9
+    - gen-ip002
+    - k1mushroom
+    - map10
+    - mas74
+    - neos-3402294-bobin
+    - neos-3555904-turama
+    - neos-3656078-kumeu
+    - neos-3754480-nidda
+    - neos-5107597-kakapo
+    - neos-827175
+    - neos-960392
+    - ns1208400
+    - ns1644855
+    - nu25-pr12
+    - nw04
+    - qap10
+    - rd-rplusc-21
+    - roi2alpha3n4
+    - sing326
+    - snp-02-004-104
+    - sp150x300d
+    - supportcase18
+    - supportcase33
+    - wachplan
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-4_p3
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

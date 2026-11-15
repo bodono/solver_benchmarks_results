@@ -1,0 +1,51 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - 50v-10
+    - air05
+    - app1-2
+    - bab2
+    - blp-ar98
+    - buildingenergy
+    - cmflsp50-24-8-8
+    - eil33-2
+    - fast0507
+    - fiball
+    - gfd-schedulen180f7d50m30k18
+    - glass-sc
+    - graph20-20-1rand
+    - irish-electricity
+    - lotsize
+    - milo-v12-6-r2-40-1
+    - neos-1354092
+    - neos-2657525-crna
+    - neos-2746589-doon
+    - neos-3004026-krka
+    - neos-3988577-wolgan
+    - neos-4532248-waihi
+    - neos-5049753-cuanza
+    - neos-5093327-huahum
+    - neos-631710
+    - neos859080
+    - pg5_34
+    - piperout-08
+    - rail02
+    - thor50dday
+    - timtab1
+    - triptim1
+    - unitcal_7
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-4_p5
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

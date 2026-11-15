@@ -1,0 +1,56 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - 50v-10
+    - CMS750_4
+    - assign1-5-8
+    - bppc4-08
+    - brazil3
+    - chromaticindex512-7
+    - dano3_5
+    - ex10
+    - glass-sc
+    - graph20-20-1rand
+    - map10
+    - n3div36
+    - neos-2746589-doon
+    - neos-3004026-krka
+    - neos-3083819-nubu
+    - neos-3381206-awhea
+    - neos-3627168-kasai
+    - neos-4387871-tavua
+    - neos-4413714-turia
+    - neos-4738912-atrato
+    - neos-5093327-huahum
+    - neos-631710
+    - neos-827175
+    - neos859080
+    - net12
+    - ns1760995
+    - ns1830653
+    - radiationm40-10-02
+    - rail507
+    - rd-rplusc-21
+    - rmatr100-p10
+    - sorrell3
+    - splice1k1
+    - supportcase33
+    - supportcase6
+    - tr12-30
+    - traininstance6
+    - triptim1
+    - uccase9
+    name: miplib
+  name: lp_miplib_relax_pdlp_1e-6_p3
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: pdlp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    solver_time_limit_sec: 300.0
+  solver: pdlp

@@ -1,0 +1,77 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - academictimetablesmall
+    - assign1-5-8
+    - atlanta-ip
+    - bab2
+    - beasleyC3
+    - blp-ar98
+    - buildingenergy
+    - cbs-cta
+    - cmflsp50-24-8-8
+    - cvs16r128-89
+    - drayage-25-23
+    - dws008-01
+    - eilA101-2
+    - ex10
+    - glass-sc
+    - highschool1-aigio
+    - irp
+    - lectsched-5-obj
+    - leo1
+    - map10
+    - markshare2
+    - mik-250-20-75-4
+    - n3div36
+    - n5-3
+    - neos-1122047
+    - neos-2746589-doon
+    - neos-3004026-krka
+    - neos-3555904-turama
+    - neos-4413714-turia
+    - neos-5049753-cuanza
+    - neos-5104907-jarama
+    - neos-5107597-kakapo
+    - neos-911970
+    - neos-933966
+    - neos-950242
+    - neos8
+    - neos859080
+    - ns1116954
+    - ns1208400
+    - ns1760995
+    - ns1830653
+    - piperout-08
+    - qap10
+    - ran14x18-disj-8
+    - rd-rplusc-21
+    - reblock115
+    - rocI-4-11
+    - rococoB10-011000
+    - roi5alpha10n8
+    - sing44
+    - sp150x300d
+    - swath1
+    - swath3
+    - tbfp-network
+    - thor50dday
+    - timtab1
+    - traininstance6
+    - uct-subprob
+    - wachplan
+    name: miplib
+  name: lp_miplib_relax_scs_cpu_1e-6_p1
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: scs_cpu_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iters: 1000000
+    time_limit_secs: 300.0
+  solver: scs

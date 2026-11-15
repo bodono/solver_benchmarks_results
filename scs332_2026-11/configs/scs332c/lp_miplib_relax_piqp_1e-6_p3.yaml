@@ -1,0 +1,76 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - 50v-10
+    - air05
+    - app1-2
+    - bab6
+    - binkar10_1
+    - blp-ic98
+    - bnatt500
+    - bppc4-08
+    - eilA101-2
+    - ex9
+    - fast0507
+    - fastxgemm-n2r6s0t2
+    - fhnw-binpack4-4
+    - fiball
+    - gen-ip002
+    - germanrr
+    - h80x6320d
+    - hypothyroid-k1
+    - irp
+    - leo1
+    - map16715-04
+    - mc11
+    - mik-250-20-75-4
+    - mzzv42z
+    - n9-3
+    - neos-1122047
+    - neos-1445765
+    - neos-1456979
+    - neos-1582420
+    - neos-3024952-loue
+    - neos-3402294-bobin
+    - neos-4722843-widden
+    - neos-4738912-atrato
+    - neos-5052403-cygnet
+    - neos-5104907-jarama
+    - neos-5195221-niemur
+    - neos-911970
+    - neos-957323
+    - neos859080
+    - net12
+    - ns1208400
+    - pg5_34
+    - physiciansched3-3
+    - qap10
+    - rd-rplusc-21
+    - rocI-4-11
+    - rocII-5-11
+    - s100
+    - savsched1
+    - seymour
+    - supportcase42
+    - thor50dday
+    - timtab1
+    - traininstance2
+    - triptim1
+    - uccase12
+    - uct-subprob
+    - var-smallemery-m6j6
+    name: miplib
+  name: lp_miplib_relax_piqp_1e-6_p3
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: piqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: piqp

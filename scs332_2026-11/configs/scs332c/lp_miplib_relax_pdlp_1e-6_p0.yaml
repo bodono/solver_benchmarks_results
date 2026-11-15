@@ -1,0 +1,56 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - app1-2
+    - blp-ic98
+    - bnatt500
+    - cmflsp50-24-8-8
+    - cryptanalysiskb128n5obj16
+    - csched007
+    - drayage-25-23
+    - gen-ip002
+    - gfd-schedulen180f7d50m30k18
+    - graphdraw-domain
+    - istanbul-no-cutoff
+    - markshare2
+    - mas76
+    - mik-250-20-75-4
+    - milo-v12-6-r2-40-1
+    - mzzv11
+    - n5-3
+    - neos-2978193-inde
+    - neos-3402294-bobin
+    - neos-4722843-widden
+    - neos-4763324-toguru
+    - neos-5195221-niemur
+    - neos-873061
+    - nexp-150-20-8-5
+    - nw04
+    - opm2-z10-s4
+    - p200x1188c
+    - peg-solitaire-a3
+    - qap10
+    - rocI-4-11
+    - satellites2-40
+    - satellites2-60-fs
+    - savsched1
+    - sct2
+    - supportcase12
+    - supportcase40
+    - supportcase7
+    - timtab1
+    - wachplan
+    name: miplib
+  name: lp_miplib_relax_pdlp_1e-6_p0
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: pdlp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    solver_time_limit_sec: 300.0
+  solver: pdlp

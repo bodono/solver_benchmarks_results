@@ -1,0 +1,19 @@
+run:
+  datasets:
+  - id: mittelmann0
+    include:
+    - bdry2
+    - fhnw-binschedule1
+    name: mittelmann
+  name: lpbig_mittelmann0_pdlp_1e-5_p1
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 1860.0
+solvers:
+- id: pdlp_1e-5
+  settings:
+    eps_abs: 1.0e-05
+    eps_rel: 1.0e-05
+    solver_time_limit_sec: 1800.0
+  solver: pdlp

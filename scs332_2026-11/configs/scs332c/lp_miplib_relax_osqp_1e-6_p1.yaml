@@ -1,0 +1,42 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - app1-1
+    - bppc4-08
+    - chromaticindex512-7
+    - dano3_5
+    - decomp2
+    - enlight_hard
+    - graphdraw-domain
+    - highschool1-aigio
+    - icir97_tension
+    - neos-1122047
+    - neos-3024952-loue
+    - neos-4300652-rahue
+    - neos-662469
+    - neos-860300
+    - ns1830653
+    - nw04
+    - p200x1188c
+    - piperout-08
+    - rail507
+    - roi5alpha10n8
+    - s100
+    - supportcase42
+    - timtab1
+    - uccase12
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-6_p1
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

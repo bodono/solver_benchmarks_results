@@ -1,0 +1,25 @@
+run:
+  datasets:
+  - id: sdplib
+    include:
+    - control5
+    - gpp250-2
+    - gpp500-1
+    - qap6
+    - qap9
+    - theta1
+    name: sdplib
+  name: sdp_sdplib_scs_cudss_1e-4_c1_p2
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 960.0
+solvers:
+- id: scs_cudss_1e-4
+  settings:
+    eps_abs: 0.0001
+    eps_rel: 0.0001
+    linear_solver: cudss
+    max_iters: 1000000
+    time_limit_secs: 900.0
+  solver: scs

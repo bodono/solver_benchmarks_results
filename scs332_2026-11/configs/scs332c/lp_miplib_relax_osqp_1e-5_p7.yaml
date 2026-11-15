@@ -1,0 +1,47 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - 30n20b8
+    - 50v-10
+    - csched007
+    - enlight_hard
+    - fiball
+    - k1mushroom
+    - milo-v12-6-r2-40-1
+    - mzzv42z
+    - neos-1582420
+    - neos-2657525-crna
+    - neos-3083819-nubu
+    - neos-3216931-puriri
+    - neos-3555904-turama
+    - neos-3656078-kumeu
+    - neos-4300652-rahue
+    - neos-5075914-elvire
+    - neos-960392
+    - neos17
+    - neos8
+    - ns1760995
+    - p200x1188c
+    - pg5_34
+    - physiciansched6-2
+    - rail02
+    - rail507
+    - rococoC11-011100
+    - satellites2-40
+    - supportcase10
+    - supportcase22
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-5_p7
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-5
+  settings:
+    eps_abs: 1.0e-05
+    eps_rel: 1.0e-05
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

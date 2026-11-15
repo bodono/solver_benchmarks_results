@@ -1,0 +1,47 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - beasleyC3
+    - binkar10_1
+    - bnatt400
+    - chromaticindex1024-7
+    - cost266-UUE
+    - drayage-100-23
+    - eil33-2
+    - fast0507
+    - gmu-35-40
+    - graph20-20-1rand
+    - map10
+    - mushroom-best
+    - neos-1171448
+    - neos-2746589-doon
+    - neos-3046615-murg
+    - neos-4338804-snowy
+    - neos-4647030-tutaki
+    - neos-4722843-widden
+    - neos5
+    - ns1644855
+    - nw04
+    - opm2-z10-s4
+    - piperout-08
+    - proteindesign122trx11p8
+    - radiationm40-10-02
+    - satellites2-60-fs
+    - sorrell3
+    - swath3
+    - timtab1
+    name: miplib
+  name: lp_miplib_relax_osqp_1e-5_p3
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: osqp_1e-5
+  settings:
+    eps_abs: 1.0e-05
+    eps_rel: 1.0e-05
+    max_iter: 1000000
+    time_limit: 300.0
+  solver: osqp

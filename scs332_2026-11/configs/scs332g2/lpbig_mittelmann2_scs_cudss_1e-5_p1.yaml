@@ -1,0 +1,21 @@
+run:
+  datasets:
+  - id: mittelmann2
+    include:
+    - L1_sixm250obs
+    - s82
+    name: mittelmann
+  name: lpbig_mittelmann2_scs_cudss_1e-5_p1
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 1860.0
+solvers:
+- id: scs_cudss_1e-5
+  settings:
+    eps_abs: 1.0e-05
+    eps_rel: 1.0e-05
+    linear_solver: cudss
+    max_iters: 1000000
+    time_limit_secs: 1800.0
+  solver: scs

@@ -1,0 +1,56 @@
+run:
+  datasets:
+  - id: miplib_relax
+    include:
+    - 30n20b8
+    - b1c1s1
+    - co-100
+    - comp07-2idx
+    - cost266-UUE
+    - cvs16r128-89
+    - decomp2
+    - exp-1-500-5-5
+    - fast0507
+    - fhnw-binpack4-4
+    - fiball
+    - gmu-35-50
+    - k1mushroom
+    - lectsched-5-obj
+    - mcsched
+    - neos-1456979
+    - neos-3656078-kumeu
+    - neos-3754480-nidda
+    - neos-4532248-waihi
+    - neos-4954672-berkel
+    - neos-5049753-cuanza
+    - neos-848589
+    - neos-911970
+    - neos-933966
+    - neos17
+    - neos5
+    - ns1952667
+    - physiciansched3-3
+    - proteindesign121hz512p9
+    - roi2alpha3n4
+    - seymour1
+    - sing326
+    - snp-02-004-104
+    - supportcase10
+    - supportcase22
+    - swath1
+    - traininstance2
+    - trento1
+    - unitcal_7
+    name: miplib
+  name: lp_miplib_relax_pdlp_1e-6_p2
+  output_dir: results
+  parallelism: 1
+  resume: true
+  timeout_seconds: 360.0
+solvers:
+- id: pdlp_1e-6
+  settings:
+    eps_abs: 1.0e-06
+    eps_rel: 1.0e-06
+    solver_time_limit_sec: 300.0
+  solver: pdlp

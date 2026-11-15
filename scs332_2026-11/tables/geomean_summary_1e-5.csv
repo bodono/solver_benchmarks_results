@@ -1,0 +1,47 @@
+family,tol,subset,solver_id,run_time_seconds,mode,shift,max_value,success_count,failure_count,max_value_by_dataset,label
+qp,1e-5,all,clarabel_1e-5,2.810956089502321,penalized,10.0,900.0,152,5,,Clarabel
+qp,1e-5,all,piqp_1e-5,3.4756891464057205,penalized,10.0,900.0,151,6,,PIQP
+qp,1e-5,all,scs_cudss_1e-5,7.472027598495,penalized,10.0,900.0,146,11,,"SCS (GPU, cuDSS)"
+qp,1e-5,all,scs_cpu_1e-5,8.434498842393072,penalized,10.0,900.0,142,15,,"SCS (CPU, MKL Pardiso)"
+qp,1e-5,all,osqp_1e-5,16.144510975164582,penalized,10.0,900.0,131,26,,OSQP
+qp,1e-5,all,cuopt_1e-5,32.78025825300846,penalized,10.0,900.0,109,48,,cuOpt (GPU)
+qp,1e-5,all,highs_1e-5,57.792446032909965,penalized,10.0,900.0,97,60,,HiGHS
+qp,1e-5,all,proxqp_1e-5,73.63766734169211,penalized,10.0,900.0,90,67,,ProxQP
+qp,1e-5,largest,clarabel_1e-5,10.746508969908906,penalized,10.0,900.0,37,3,,Clarabel
+qp,1e-5,largest,scs_cudss_1e-5,12.136624065818424,penalized,10.0,900.0,38,2,,"SCS (GPU, cuDSS)"
+qp,1e-5,largest,piqp_1e-5,16.73890085300004,penalized,10.0,900.0,35,5,,PIQP
+qp,1e-5,largest,cuopt_1e-5,19.833387866634567,penalized,10.0,900.0,32,8,,cuOpt (GPU)
+qp,1e-5,largest,scs_cpu_1e-5,22.542515572474898,penalized,10.0,900.0,34,6,,"SCS (CPU, MKL Pardiso)"
+qp,1e-5,largest,osqp_1e-5,37.054574339508854,penalized,10.0,900.0,31,9,,OSQP
+qp,1e-5,largest,highs_1e-5,301.9961112845319,penalized,10.0,900.0,13,27,,HiGHS
+qp,1e-5,largest,proxqp_1e-5,352.8702587076978,penalized,10.0,900.0,12,28,,ProxQP
+lp,1e-5,all,highs_1e-5,5.555184510618934,penalized,10.0,900.0,333,16,,HiGHS
+lp,1e-5,all,scs_cudss_1e-5,8.946546774161664,penalized,10.0,900.0,327,22,,"SCS (GPU, cuDSS)"
+lp,1e-5,all,piqp_1e-5,9.846339815739537,penalized,10.0,900.0,315,34,,PIQP
+lp,1e-5,all,clarabel_1e-5,10.712885891080653,penalized,10.0,900.0,322,27,,Clarabel
+lp,1e-5,all,scs_cpu_1e-5,11.311975000288808,penalized,10.0,900.0,321,28,,"SCS (CPU, MKL Pardiso)"
+lp,1e-5,all,pdlp_1e-5,30.44583044186151,penalized,10.0,900.0,283,66,,PDLP (OR-Tools)
+lp,1e-5,all,cuopt_1e-5,47.62198932876162,penalized,10.0,900.0,216,133,,cuOpt (GPU)
+lp,1e-5,all,osqp_1e-5,74.30691309489211,penalized,10.0,900.0,217,132,,OSQP
+lp,1e-5,largest,scs_cudss_1e-5,28.266729825711522,penalized,10.0,900.0,78,10,,"SCS (GPU, cuDSS)"
+lp,1e-5,largest,highs_1e-5,32.5547174953382,penalized,10.0,900.0,73,15,,HiGHS
+lp,1e-5,largest,scs_cpu_1e-5,50.94747250637176,penalized,10.0,900.0,74,14,,"SCS (CPU, MKL Pardiso)"
+lp,1e-5,largest,piqp_1e-5,51.84840140112719,penalized,10.0,900.0,63,25,,PIQP
+lp,1e-5,largest,clarabel_1e-5,69.61502690673673,penalized,10.0,900.0,70,18,,Clarabel
+lp,1e-5,largest,pdlp_1e-5,165.2177108050295,penalized,10.0,900.0,49,39,,PDLP (OR-Tools)
+lp,1e-5,largest,cuopt_1e-5,323.6863926153678,penalized,10.0,900.0,20,68,,cuOpt (GPU)
+lp,1e-5,largest,osqp_1e-5,348.626991127524,penalized,10.0,900.0,32,56,,OSQP
+lpbig,1e-5,all,scs_cudss_1e-5,276.40272174929396,penalized,10.0,5400.0,25,12,,"SCS (GPU, cuDSS)"
+lpbig,1e-5,all,scs_cpu_1e-5,579.6698076698198,penalized,10.0,5400.0,21,16,,"SCS (CPU, MKL Pardiso)"
+lpbig,1e-5,all,clarabel_1e-5,693.0711615920006,penalized,10.0,5400.0,21,16,,Clarabel
+lpbig,1e-5,all,pdlp_1e-5,1231.6520536163073,penalized,10.0,5400.0,14,23,,PDLP (OR-Tools)
+lpbig,1e-5,all,piqp_1e-5,1332.3185465138902,penalized,10.0,5400.0,12,25,,PIQP
+lpbig,1e-5,all,cuopt_1e-5,2572.03081173789,penalized,10.0,5400.0,5,32,,cuOpt (GPU)
+lpbig,1e-5,all,highs_1e-5,2947.2384899740996,penalized,10.0,5400.0,9,28,,HiGHS
+lpbig,1e-5,largest,scs_cudss_1e-5,1656.7654280633758,penalized,10.0,5400.0,3,7,,"SCS (GPU, cuDSS)"
+lpbig,1e-5,largest,cuopt_1e-5,2932.2320651878053,penalized,10.0,5400.0,1,9,,cuOpt (GPU)
+lpbig,1e-5,largest,scs_cpu_1e-5,3425.712021833997,penalized,10.0,5400.0,2,8,,"SCS (CPU, MKL Pardiso)"
+lpbig,1e-5,largest,clarabel_1e-5,3454.1166353940685,penalized,10.0,5400.0,2,8,,Clarabel
+lpbig,1e-5,largest,highs_1e-5,3459.499714752506,penalized,10.0,5400.0,1,9,,HiGHS
+lpbig,1e-5,largest,piqp_1e-5,3823.1378439341606,penalized,10.0,5400.0,1,9,,PIQP
+lpbig,1e-5,largest,pdlp_1e-5,4770.580311013733,penalized,10.0,5400.0,1,9,,PDLP (OR-Tools)
